@@ -1,11 +1,11 @@
-public class mediaItem {
+public class mediaItem extends Item {
 
 	private int itemID;
-	private string title;
-	private string location;
-	private string actors;
-	private string director;
-	private string producer;
+	private String title;
+	private String location;
+	private String actors;
+	private String director;
+	private String producer;
 	private Object rentalLength;
 	private int attribute;
 
@@ -17,43 +17,43 @@ public class mediaItem {
 		this.itemID = itemID;
 	}
 
-	public string getTitle() {
+	public String getTitle() {
 		return this.title;
 	}
 
-	public void setTitle(string title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public string getLocation() {
+	public String getLocation() {
 		return this.location;
 	}
 
-	public void setLocation(string location) {
+	public void setLocation(String location) {
 		this.location = location;
 	}
 
-	public string getActors() {
+	public String getActors() {
 		return this.actors;
 	}
 
-	public void setActors(string actors) {
+	public void setActors(String actors) {
 		this.actors = actors;
 	}
 
-	public string getDirector() {
+	public String getDirector() {
 		return this.director;
 	}
 
-	public void setDirector(string director) {
+	public void setDirector(String director) {
 		this.director = director;
 	}
 
-	public string getProducer() {
+	public String getProducer() {
 		return this.producer;
 	}
 
-	public void setProducer(string producer) {
+	public void setProducer(String producer) {
 		this.producer = producer;
 	}
 

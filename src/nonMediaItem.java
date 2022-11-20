@@ -1,14 +1,14 @@
-public class nonMediaItem {
+public class nonMediaItem extends Item{
 
-	private string description;
+	private String description;
 	private float price;
 	private float cost;
 
-	public string getDescription() {
+	public String getDescription() {
 		return this.description;
 	}
 
-	public void setDescription(string description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 
