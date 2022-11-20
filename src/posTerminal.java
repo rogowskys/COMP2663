@@ -10,7 +10,7 @@ public class posTerminal {
 		throw new UnsupportedOperationException();
 	}
 
-	public reservation createReservation() {
+	public Reservation createReservation() {
 		// TODO - implement posTerminal.createReservation
 		throw new UnsupportedOperationException();
 	}
