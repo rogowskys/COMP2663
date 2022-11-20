@@ -38,12 +38,12 @@ public class posTerminal {
 	 * 
 	 * @param employeID
 	 */
-	public void loginUser(staff employeID) {
+	public void loginUser(Staff employeID) {
 		// TODO - implement posTerminal.loginUser
 		throw new UnsupportedOperationException();
 	}
 
-	public account operation() {
+	public Account operation() {
 		// TODO - implement posTerminal.operation
 		throw new UnsupportedOperationException();
 	}
