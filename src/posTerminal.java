@@ -1,6 +1,6 @@
 public class posTerminal {
 
-	public transaction makeNewTransaction() {
+	public Transaction makeNewTransaction() {
 		// TODO - implement posTerminal.makeNewTransaction
 		throw new UnsupportedOperationException();
 	}
