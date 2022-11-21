@@ -3,15 +3,7 @@ public abstract class Item {
 	int UPC;
 	float price;
 	int inventoryCount;
-	int itemID;
 
-	public int getItemID() {
-		return itemID;
-	}
-
-	public void setItemID(int itemID) {
-		this.itemID = itemID;
-	}
 
 	public int getUPC() {
 		return UPC;
@@ -25,8 +17,8 @@ public abstract class Item {
 		return inventoryCount;
 	}
 
-	public void setUPC(int uPC) {
-		UPC = uPC;
+	public void setUPC(int UPC) {
+		this.UPC = UPC;
 	}
 
 	public void setPrice(float price) {
