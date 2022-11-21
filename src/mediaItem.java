@@ -6,7 +6,7 @@ public class mediaItem extends Item {
 	private String actors;
 	private String director;
 	private String producer;
-	private Object rentalLength;
+	private int rentalLength;
 	private int attribute;
 
 	public int getItemID() {

@@ -1,16 +1,16 @@
 public class reports {
 
-	public transaction listTransactions() {
+	public void listTransactions() {
 		// TODO - implement reports.listTransactions
 		throw new UnsupportedOperationException();
 	}
 
-	public account listAccounts() {
+	public void listAccounts() {
 		// TODO - implement reports.listAccounts
 		throw new UnsupportedOperationException();
 	}
 
-	public inventory listInventory() {
+	public void listInventory() {
 		// TODO - implement reports.listInventory
 		throw new UnsupportedOperationException();
 	}
