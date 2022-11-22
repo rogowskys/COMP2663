@@ -83,11 +83,17 @@ public class posTerminal {
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * 
+	 */
 	public void endTransaction() {
 		// TODO - implement posTerminal.endTransaction
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * 
+	 */
 	public static void manageCustomerAccount() {
 		customerManagement.customerManagementMenu();
 	}
@@ -111,6 +117,9 @@ public class posTerminal {
 		reports.listMediaInventory(mediaInventory);
 	}
 
+	/**
+	 * 
+	 */
 	private static void fillDatabaseWithData() {
 		mediaInventory.add(new mediaItem(575200221, 0.93, 2, "David and Lisa", "habitasse", "Web Jeske", "Gay Montford",
 				"Alidia Maffione", 7, mediaType.DVD));
