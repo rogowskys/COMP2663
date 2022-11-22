@@ -1,15 +1,14 @@
 public abstract class Item {
 
 	int UPC;
-	float price;
+	double price;
 	int inventoryCount;
-
 
 	public int getUPC() {
 		return UPC;
 	}
 
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -21,12 +20,12 @@ public abstract class Item {
 		this.UPC = UPC;
 	}
 
-	public void setPrice(float price) {
-		this.price = price;
-	}
-
 	public void setInventoryCount(int inventoryCount) {
 		this.inventoryCount = inventoryCount;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 }
