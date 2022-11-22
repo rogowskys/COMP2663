@@ -1,6 +1,5 @@
 public class mediaItem extends Item {
 
-	
 	private String title;
 	private String location;
 	private String actors;
@@ -69,19 +68,38 @@ public class mediaItem extends Item {
 		// Null Constructor
 	}
 
-	public mediaItem(int UPC, float price, int inventoryCount, String title, String location, String actors, String director,
-		String producer, int rentalLength, mediaType typeOfMedia) {
-			this.UPC = UPC;
-			this.price = price;
-			this.inventoryCount = inventoryCount;
-			this.title = title;
-			this.location = location;
-			this.actors = actors;
-			this.director = director;
-			this.producer = producer;
-			this.rentalLength = rentalLength;
-			this.typeOfMedia = typeOfMedia;
+	/**
+	 * @param UPC
+	 * @param price
+	 * @param inventoryCount
+	 * @param title
+	 * @param location
+	 * @param actors
+	 * @param director
+	 * @param producer
+	 * @param rentalLength
+	 * @param typeOfMedia
+	 */
+	public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
+			String director,
+			String producer, int rentalLength, mediaType typeOfMedia) {
+		this.UPC = UPC;
+		this.price = price;
+		this.inventoryCount = inventoryCount;
+		this.title = title;
+		this.location = location;
+		this.actors = actors;
+		this.director = director;
+		this.producer = producer;
+		this.rentalLength = rentalLength;
+		this.typeOfMedia = typeOfMedia;
 
-		}
+	}
+
+	public String toString() {
+
+		return title + "\t\t\t" + UPC + "\t$" + price + "\t" + typeOfMedia;
+
+	}
 
 }
