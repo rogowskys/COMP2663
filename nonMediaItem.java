@@ -1,7 +1,6 @@
-public class nonMediaItem extends Item{
+public class nonMediaItem extends Item {
 
 	private String description;
-	private float cost;
 
 	public String getDescription() {
 		return this.description;
@@ -11,12 +10,16 @@ public class nonMediaItem extends Item{
 		this.description = description;
 	}
 
-	public float getCost() {
-		return this.cost;
+	public nonMediaItem(String description, int UPC, double price, int inventoryCount) {
+		this.description = description;
+		this.UPC = UPC;
+		this.price = price;
+		this.inventoryCount = inventoryCount;
 	}
 
-	public void setCost(float cost) {
-		this.cost = cost;
+	public String toString() {
+		return description + "\t$" + price + "\t" + inventoryCount + "\t" + UPC;
+
 	}
 
 }
