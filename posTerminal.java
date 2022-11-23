@@ -1,19 +1,22 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Allows the system to operate.
+ */
 public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();
 	public static ArrayList<nonMediaItem> inventory = new ArrayList<>();
 
 	// Main driver for posTerminal
 	/**
-	 * @param args
+	 * Main driver for the terminal.
+	 * @param args passes arguments from main
 	 */
 	public static void main(String[] args) {
 
 		// Seed the 'database'
 		fillDatabaseWithData();
-		//
 
 		Scanner scan = new Scanner(System.in); // Capturing the input
 		String menuOption = null;
@@ -59,24 +62,35 @@ public class posTerminal {
 		return;
 	}
 
+	/**
+	 * Creates the current sale transaction.
+	 * @return current transaction
+	 */
 	public Transaction makeNewTransaction() {
 		// TODO - implement posTerminal.makeNewTransaction
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 *
+	 */
 	public void mediaSearch() {
 		// TODO - implement posTerminal.mediaSearch
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * Allows a new reservation to be created.
+	 * @return reservation
+	 */
 	public Reservation createReservation() {
 		// TODO - implement posTerminal.createReservation
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * 
-	 * @param accountID
+	 * Ability to search for a reservation
+	 * @param accountID ID number of account of customer
 	 */
 	public void searchForReservation(Account accountID) {
 		// TODO - implement posTerminal.searchForReservation
@@ -99,8 +113,8 @@ public class posTerminal {
 	}
 
 	/**
-	 * 
-	 * @param employeeID
+	 * Allows system user to enter their username to have access.
+	 * @param employeeID username of employee trying to use the system
 	 */
 	private static boolean loginUser(String employeeID) {
 		if (Staff.isEmployeeID(employeeID)) {
@@ -112,6 +126,10 @@ public class posTerminal {
 		}
 	}
 
+	/**
+	 * Allows reports to be created.
+	 * Reports include: Inventory, Transactions,
+	 */
 	public static void generateReports() {
 		reports.listInventory(inventory);
 		reports.listMediaInventory(mediaInventory);

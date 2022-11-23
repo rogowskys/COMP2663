@@ -1,3 +1,6 @@
+/**
+ * Creates an item.
+ */
 public abstract class Item {
 
 	int UPC;
