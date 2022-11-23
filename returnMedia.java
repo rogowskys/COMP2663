@@ -1,9 +1,12 @@
+/**
+ * Allows media to be returned when rental is due
+ */
 public class returnMedia {
 
 	/**
-	 * 
-	 * @param customer
-	 * @param item
+	 * Returns the media from customer.
+	 * @param customer the account from the customer
+	 * @param item media that is being returned
 	 */
 	public returnMedia(Account customer, mediaItem item) {
 		// TODO - implement returnMedia.returnMedia
