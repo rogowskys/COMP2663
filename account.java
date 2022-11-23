@@ -3,42 +3,16 @@
  */
 public class account {
 
-	private int accountID = 100;
+	private int accountID;
 	private String customerName;
 	private String customerAddress;
 	private String customerPhoneNumber;
 	private double accountBalance = 0.00;
 
-	/**
-	 * Checks account for reservation.
-	 */
-	void reservationSearch() {
-		// TODO - implement Account.reservationSearch
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * Updates customer's account
-	 */
-	void updateCustomerAccount() {
-		// TODO - implement Account.updateCustomerAccount
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * Searches accounts database for customer.
-	 */
-	void findCustomerAccount() {
-		// TODO - implement Account.findCustomerAccount
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * Creates a new account for a customer.
-	 */
-	void createCustomerAccount() {
-		// TODO - implement Account.createCustomerAccount
-		throw new UnsupportedOperationException();
+	public account(String customerName, String customerAddress, String customerPhoneNumber) {
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.customerPhoneNumber = customerPhoneNumber;
 	}
 
 	public int getAccountID() {
@@ -85,11 +59,5 @@ public class account {
 		return "";
 	}
 
-	public account(String customerName, String customerAddress, String customerPhoneNumber) {
-		this.accountID++;
-		this.customerName = customerName;
-		this.customerAddress = customerAddress;
-		this.customerPhoneNumber = customerPhoneNumber;
-	}
 
 }

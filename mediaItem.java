@@ -11,6 +11,39 @@ public class mediaItem extends Item {
 	private int rentalLength;
 	private mediaType typeOfMedia;
 
+	public mediaItem() {
+		// Null Constructor
+	}
+
+	/**
+	 * Adds a new media item.
+	 * @param UPC universal product code for this media item
+	 * @param price price of this media item
+	 * @param inventoryCount number of this media item in inventory
+	 * @param title title of this media item
+	 * @param location location of where this media item is
+	 * @param actors actors in this media item
+	 * @param director director of this media item
+	 * @param producer producer of this media item
+	 * @param rentalLength time period that this media item can be rented
+	 * @param typeOfMedia media type of this item
+	 */
+	public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
+			String director,
+			String producer, int rentalLength, mediaType typeOfMedia) {
+		this.UPC = UPC;
+		this.price = price;
+		this.inventoryCount = inventoryCount;
+		this.title = title;
+		this.location = location;
+		this.actors = actors;
+		this.director = director;
+		this.producer = producer;
+		this.rentalLength = rentalLength;
+		this.typeOfMedia = typeOfMedia;
+
+	}
+
 	public mediaType getTypeOfMedia() {
 		return typeOfMedia;
 	}
@@ -67,43 +100,8 @@ public class mediaItem extends Item {
 		this.producer = producer;
 	}
 
-	public mediaItem() {
-		// Null Constructor
-	}
-
-	/**
-	 * Adds a new media item.
-	 * @param UPC universal product code for this media item
-	 * @param price price of this media item
-	 * @param inventoryCount number of this media item in inventory
-	 * @param title title of this media item
-	 * @param location location of where this media item is
-	 * @param actors actors in this media item
-	 * @param director director of this media item
-	 * @param producer producer of this media item
-	 * @param rentalLength time period that this media item can be rented
-	 * @param typeOfMedia media type of this item
-	 */
-	public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
-			String director,
-			String producer, int rentalLength, mediaType typeOfMedia) {
-		this.UPC = UPC;
-		this.price = price;
-		this.inventoryCount = inventoryCount;
-		this.title = title;
-		this.location = location;
-		this.actors = actors;
-		this.director = director;
-		this.producer = producer;
-		this.rentalLength = rentalLength;
-		this.typeOfMedia = typeOfMedia;
-
-	}
-
 	public String toString() {
-
 		return title + "\t\t\t" + UPC + "\t$" + price + "\t" + typeOfMedia;
-
 	}
 
 }

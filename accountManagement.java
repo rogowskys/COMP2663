@@ -32,4 +32,37 @@ public class accountManagement {
             }
         } while (!menuOption.equals("Q")); // quitting the program
     }
+    //This is a mess herein..
+
+	/**
+	 * Checks account for reservation.
+	 */
+	void reservationSearch() {
+		// TODO - implement Account.reservationSearch
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * Updates customer's account
+	 */
+	void updateCustomerAccount() {
+		// TODO - implement Account.updateCustomerAccount
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * Searches accounts database for customer.
+	 */
+	void findCustomerAccount() {
+		// TODO - implement Account.findCustomerAccount
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * Creates a new account for a customer.
+	 */
+	void createCustomerAccount() {
+		// TODO - implement Account.createCustomerAccount
+		throw new UnsupportedOperationException();
+	}
 }

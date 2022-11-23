@@ -11,6 +11,7 @@ public class posTerminal {
 	// Main driver for posTerminal
 	/**
 	 * Main driver for the terminal.
+	 * 
 	 * @param args passes arguments from main
 	 */
 	public static void main(String[] args) {
@@ -63,7 +64,39 @@ public class posTerminal {
 	}
 
 	/**
+	 * 
+	 */
+	public static void manageCustomerAccount() {
+		accountManagement.accountManagementMenu();
+	}
+
+	/**
+	 * Allows reports to be created.
+	 * Reports include: Inventory, Transactions,
+	 */
+	public static void generateReports() {
+		reports.listInventory(inventory);
+		reports.listMediaInventory(mediaInventory);
+	}
+
+	/**
+	 * Allows system user to enter their username to have access.
+	 * 
+	 * @param employeeID username of employee trying to use the system
+	 */
+	private static boolean loginUser(String employeeID) {
+		if (Staff.isEmployeeID(employeeID)) {
+			System.out.println("Welcome, " + employeeID);
+			return true;
+		} else {
+			System.out.println("Invalid login.");
+			return false;
+		}
+	}
+
+	/**
 	 * Creates the current sale transaction.
+	 * 
 	 * @return current transaction
 	 */
 	public Transaction makeNewTransaction() {
@@ -81,6 +114,7 @@ public class posTerminal {
 
 	/**
 	 * Allows a new reservation to be created.
+	 * 
 	 * @return reservation
 	 */
 	public Reservation createReservation() {
@@ -90,6 +124,7 @@ public class posTerminal {
 
 	/**
 	 * Ability to search for a reservation
+	 * 
 	 * @param accountID ID number of account of customer
 	 */
 	public void searchForReservation(account accountID) {
@@ -103,36 +138,6 @@ public class posTerminal {
 	public void endTransaction() {
 		// TODO - implement posTerminal.endTransaction
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 */
-	public static void manageCustomerAccount() {
-		accountManagement.accountManagementMenu();
-	}
-
-	/**
-	 * Allows system user to enter their username to have access.
-	 * @param employeeID username of employee trying to use the system
-	 */
-	private static boolean loginUser(String employeeID) {
-		if (Staff.isEmployeeID(employeeID)) {
-			System.out.println("Welcome, " + employeeID);
-			return true;
-		} else {
-			System.out.println("Invalid login.");
-			return false;
-		}
-	}
-
-	/**
-	 * Allows reports to be created.
-	 * Reports include: Inventory, Transactions,
-	 */
-	public static void generateReports() {
-		reports.listInventory(inventory);
-		reports.listMediaInventory(mediaInventory);
 	}
 
 	/**
@@ -152,5 +157,4 @@ public class posTerminal {
 		inventory.add(new nonMediaItem("Pepsi 2L", 0, 2.99, 75));
 		inventory.add(new nonMediaItem("Fresh Popcorn", 0, 9.99, -1));
 	}
-
 }
