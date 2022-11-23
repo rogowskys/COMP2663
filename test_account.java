@@ -14,7 +14,7 @@ public class test_account {
         customerList.add(third);
 
         System.out.println("Customer Account List:\n");
-        System.out.println("Name\t\tAddress")
+        System.out.println("Name\t\tAddress");
 
 
 
