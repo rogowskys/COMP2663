@@ -1,13 +1,13 @@
 /**
  * Creates and stores customer accounts.
  */
-public class Account {
+public class account {
 
-	int accountID;
-	String customerName;
-	String customerAddress;
-	String customerPhoneNumber;
-	int accountBalance;
+	private int accountID = 100;
+	private String customerName;
+	private String customerAddress;
+	private String customerPhoneNumber;
+	private double accountBalance = 0.00;
 
 	/**
 	 * Checks account for reservation.
@@ -39,6 +39,60 @@ public class Account {
 	void createCustomerAccount() {
 		// TODO - implement Account.createCustomerAccount
 		throw new UnsupportedOperationException();
+	}
+
+	public int getAccountID() {
+		return accountID;
+	}
+
+	public void setAccountID(int accountID) {
+		this.accountID = accountID;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
+
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+
+	public String getCustomerPhoneNumber() {
+		return customerPhoneNumber;
+	}
+
+	public void setCustomerPhoneNumber(String customerPhoneNumber) {
+		this.customerPhoneNumber = customerPhoneNumber;
+	}
+
+	public double getAccountBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(double accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+	@Override
+	public String toString() {
+		return "account [accountID=" + accountID + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", customerPhoneNumber=" + customerPhoneNumber + ", accountBalance="
+				+ accountBalance + "]";
+	}
+
+	public account(String customerName, String customerAddress, String customerPhoneNumber) {
+		this.accountID++;
+		this.customerName = customerName;
+		this.customerAddress = customerAddress;
+		this.customerPhoneNumber = customerPhoneNumber;
 	}
 
 }

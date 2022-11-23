@@ -8,7 +8,7 @@ public class accountManagement {
     /**
      * Creates a menu for the customer accounts system.
      */
-    public static void customerManagementMenu() {
+    public static void accountManagementMenu() {
         Scanner scan = new Scanner(System.in); // Capturing the input
         String menuOption = null;
 

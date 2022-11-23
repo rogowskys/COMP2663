@@ -92,7 +92,7 @@ public class posTerminal {
 	 * Ability to search for a reservation
 	 * @param accountID ID number of account of customer
 	 */
-	public void searchForReservation(Account accountID) {
+	public void searchForReservation(account accountID) {
 		// TODO - implement posTerminal.searchForReservation
 		throw new UnsupportedOperationException();
 	}
@@ -109,7 +109,7 @@ public class posTerminal {
 	 * 
 	 */
 	public static void manageCustomerAccount() {
-		accountManagement.customerManagementMenu();
+		accountManagement.accountManagementMenu();
 	}
 
 	/**
