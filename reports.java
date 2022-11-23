@@ -16,9 +16,12 @@ public class reports {
 	/**
 	 * Prints a customer accounts list.
 	 */
-	public void listAccounts() {
-		// TODO - implement reports.listAccounts
-		throw new UnsupportedOperationException();
+	public static void listAccounts(ArrayList customerAccountList) {
+		System.out.println("Customer Account List:\n");
+        System.out.println("Account No.\tCustomer Name\tPhone Number\tAccount Balance");
+        for (int i = 0; i < customerAccountList.size(); i++){
+            System.out.println(customerAccountList.get(i));
+        }
 	}
 
 	/**
@@ -28,7 +31,7 @@ public class reports {
 	public static void listInventory(ArrayList inventoryToPrint) {
 		System.out.println("\n\nNon-media Inventory:");
 		System.out.println("Description\tPrice\tOn Hand\tUPC");
-		for (int j = 0; j < 3; j++) {
+		for (int j = 0; j < inventoryToPrint.size(); j++) {
 			System.out.println(inventoryToPrint.get(j));
 		}
 	}
@@ -40,7 +43,7 @@ public class reports {
 	public static void listMediaInventory(ArrayList inventoryToPrint) {
 		System.out.println("\n\nMedia Inventory:");
 		System.out.println("Title\t\t\t\tUPC\t\tPrice\tType");
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < inventoryToPrint.size(); i++) {
 			System.out.println(inventoryToPrint.get(i));
 		}
 	}

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -5,34 +6,45 @@ import java.util.Scanner;
  */
 public class accountManagement {
 
-    /**
-     * Creates a menu for the customer accounts system.
-     */
-    public static void accountManagementMenu() {
-        Scanner scan = new Scanner(System.in); // Capturing the input
-        String menuOption = null;
+	/**
+	 * Creates a menu for the customer accounts system.
+	 * @param customerAccounts
+	 */
+	public static void accountManagementMenu(ArrayList<account> customerAccounts) {
+		Scanner scan = new Scanner(System.in);
+		String menuOption = null;
 
-        System.out.println("\n\n");
-        System.out.println("Customer Managment Menu");
-        System.out.println("Q) (Q)uit");
+		System.out.println("\n\n");
+		System.out.println("Customer Managment Menu\n");
+		System.out.println("(C)reate New Account");
+		System.out.println("(U)pdate A Customer Account");
+		System.out.println("(D)isplay All Customer Accounts");
+		System.out.println("(S)earch for Cutsomer Account\n");
+		System.out.println("(B)ack");
 
-        do {
-            menuOption = scan.nextLine();
-            switch (menuOption) {
-                case "C":
-                    // do what you want
-                    break;
-                case "A":
-                    // do what you want
-                    break;
-  
-                default:
-                    break;
-                // Add the rest of your cases
-            }
-        } while (!menuOption.equals("Q")); // quitting the program
-    }
-    //This is a mess herein..
+		do {
+			System.out.println("Selection:");
+			menuOption = scan.nextLine();
+			switch (menuOption.trim()) {
+				case "C":
+					createCustomerAccount(customerAccounts);
+					break;
+				case "U":
+					updateCustomerAccount(customerAccounts);
+					break;
+				case "D":
+					reports.listAccounts(customerAccounts;)
+					break;
+				case "S":
+					findCustomerAccount(customerAccounts);
+					break;
+				default:
+					System.out.println("Invalid Selection\n");
+					break;
+			}
+		} while (!menuOption.equals("B")); // quitting the program
+	}
+	// This is a mess herein..
 
 	/**
 	 * Checks account for reservation.
@@ -45,7 +57,7 @@ public class accountManagement {
 	/**
 	 * Updates customer's account
 	 */
-	void updateCustomerAccount() {
+	static void updateCustomerAccount() {
 		// TODO - implement Account.updateCustomerAccount
 		throw new UnsupportedOperationException();
 	}
@@ -53,7 +65,7 @@ public class accountManagement {
 	/**
 	 * Searches accounts database for customer.
 	 */
-	void findCustomerAccount() {
+	static void findCustomerAccount() {
 		// TODO - implement Account.findCustomerAccount
 		throw new UnsupportedOperationException();
 	}
@@ -61,7 +73,7 @@ public class accountManagement {
 	/**
 	 * Creates a new account for a customer.
 	 */
-	void createCustomerAccount() {
+	static void createCustomerAccount() {
 		// TODO - implement Account.createCustomerAccount
 		throw new UnsupportedOperationException();
 	}

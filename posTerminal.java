@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();
 	public static ArrayList<nonMediaItem> inventory = new ArrayList<>();
+	public static ArrayList<account> customerAccounts = new ArrayList<>();
 
 	// Main driver for posTerminal
 	/**
