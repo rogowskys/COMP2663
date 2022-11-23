@@ -109,7 +109,7 @@ public class posTerminal {
 	 * 
 	 */
 	public static void manageCustomerAccount() {
-		customerManagement.customerManagementMenu();
+		accountManagement.customerManagementMenu();
 	}
 
 	/**
