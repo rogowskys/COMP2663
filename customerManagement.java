@@ -1,7 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * Allows customer accounts system to operate
+ */
 public class customerManagement {
 
+    /**
+     * Creates a menu for the customer accounts system.
+     */
     public static void customerManagementMenu() {
         Scanner scan = new Scanner(System.in); // Capturing the input
         String menuOption = null;

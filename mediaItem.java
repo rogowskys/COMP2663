@@ -1,3 +1,6 @@
+/**
+ * Creates a media item.
+ */
 public class mediaItem extends Item {
 
 	private String title;
@@ -69,16 +72,17 @@ public class mediaItem extends Item {
 	}
 
 	/**
-	 * @param UPC
-	 * @param price
-	 * @param inventoryCount
-	 * @param title
-	 * @param location
-	 * @param actors
-	 * @param director
-	 * @param producer
-	 * @param rentalLength
-	 * @param typeOfMedia
+	 * Adds a new media item.
+	 * @param UPC universal product code for this media item
+	 * @param price price of this media item
+	 * @param inventoryCount number of this media item in inventory
+	 * @param title title of this media item
+	 * @param location location of where this media item is
+	 * @param actors actors in this media item
+	 * @param director director of this media item
+	 * @param producer producer of this media item
+	 * @param rentalLength time period that this media item can be rented
+	 * @param typeOfMedia media type of this item
 	 */
 	public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
 			String director,

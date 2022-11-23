@@ -1,3 +1,6 @@
+/**
+ * Allows for a payment to be processed
+ */
 public class Payment {
 
 	int amount;
