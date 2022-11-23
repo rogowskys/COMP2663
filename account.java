@@ -3,7 +3,7 @@
  */
 public class account {
 
-	private int accountID;
+	private int accountID = 100;
 	private String customerName;
 	private String customerAddress;
 	private String customerPhoneNumber;
@@ -56,7 +56,7 @@ public class account {
 	}
 
 	public String toString() {
-		return "";
+		return accountID + "\t\t" + customerName + "\t" + customerPhoneNumber + "\t$" + accountBalance;
 	}
 
 

@@ -14,9 +14,10 @@ public class test_account {
         customerList.add(third);
 
         System.out.println("Customer Account List:\n");
-        System.out.println("Name\t\tAddress");
-
-
+        System.out.println("Account No.\tCustomer Name\tPhone Number\tAccount Balance");
+        for (int i = 0; i < 3; i++){
+            System.out.println(customerList.get(i));
+        }
 
 
     }
