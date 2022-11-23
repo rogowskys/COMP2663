@@ -3,7 +3,7 @@ import java.util.Scanner;
 /**
  * Allows customer accounts system to operate
  */
-public class customerManagement {
+public class accountManagement {
 
     /**
      * Creates a menu for the customer accounts system.

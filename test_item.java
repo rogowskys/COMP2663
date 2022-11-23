@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class itemTest {
+public class test_item {
 
     // Test class for the mediaItem and nonMediaItem types.
 
