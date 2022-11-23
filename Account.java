@@ -81,11 +81,8 @@ public class account {
 		this.accountBalance = accountBalance;
 	}
 
-	@Override
 	public String toString() {
-		return "account [accountID=" + accountID + ", customerName=" + customerName + ", customerAddress="
-				+ customerAddress + ", customerPhoneNumber=" + customerPhoneNumber + ", accountBalance="
-				+ accountBalance + "]";
+		return "";
 	}
 
 	public account(String customerName, String customerAddress, String customerPhoneNumber) {
