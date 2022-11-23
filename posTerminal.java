@@ -33,21 +33,21 @@ public class posTerminal {
 		do {
 			System.out.println("\n\n");
 			System.out.println("--- Main Menu ---");
-			System.out.println("C) (C)reate new sale/rental transaction");
-			System.out.println("A)  Customer (A)ccount Management");
-			System.out.println("S) (S)earch inventory");
-			System.out.println("R)  Create new (R)eservation");
-			System.out.println("P) (P)rint reports\n");
+			System.out.println("(N)ew sale/rental transaction");
+			System.out.println("(C)ustomer Account Management");
+			System.out.println("(M)anage inventory");
+			System.out.println("Create new (R)eservation");
+			System.out.println("(P)rint reports\n");
 			System.out.println("Q) (Q)uit");
 			menuOption = scan.next();
 			switch (menuOption.trim()) {
-				case "C":
-					// do what you want
+				case "N":
+					makeNewTransaction();
 					break;
-				case "A":
+				case "C":
 					manageCustomerAccount();
 					break;
-				case "S":
+				case "M":
 					// do what you want
 					break;
 				case "R":
@@ -68,7 +68,7 @@ public class posTerminal {
 	 * 
 	 */
 	public static void manageCustomerAccount() {
-		accountManagement.accountManagementMenu();
+		accountManagement.accountManagementMenu(customerAccounts);
 	}
 
 	/**
@@ -76,8 +76,7 @@ public class posTerminal {
 	 * Reports include: Inventory, Transactions,
 	 */
 	public static void generateReports() {
-		reports.listInventory(inventory);
-		reports.listMediaInventory(mediaInventory);
+		// TODO report menu method
 	}
 
 	/**
@@ -100,7 +99,7 @@ public class posTerminal {
 	 * 
 	 * @return current transaction
 	 */
-	public Transaction makeNewTransaction() {
+	public static Transaction makeNewTransaction() {
 		// TODO - implement posTerminal.makeNewTransaction
 		throw new UnsupportedOperationException();
 	}
@@ -108,8 +107,9 @@ public class posTerminal {
 	/**
 	 *
 	 */
-	public void mediaSearch() {
-		// TODO - implement posTerminal.mediaSearch
+	public void manageInventory() {
+		// TODO - implement posTerminal.manageInventory
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -145,6 +145,7 @@ public class posTerminal {
 	 * 
 	 */
 	private static void fillDatabaseWithData() {
+		// Make some inventory
 		mediaInventory.add(new mediaItem(575200221, 0.93, 2, "David and Lisa", "habitasse", "Web Jeske", "Gay Montford",
 				"Alidia Maffione", 7, mediaType.DVD));
 		mediaInventory.add(new mediaItem(41190319, 6.27, 8, "Jurassic Park",
@@ -154,8 +155,15 @@ public class posTerminal {
 		mediaInventory.add(new mediaItem(62362184, 4.75, 6, "Stuff and Dough", "vehicula",
 				"Corrianne Hawton", "Jeniffer Cork", "Brinn Jedrzaszkiewicz", 2, mediaType.DVD));
 
+		// Make some more inventory
 		inventory.add(new nonMediaItem("Doritos 454g", 0, 5.99, 50));
 		inventory.add(new nonMediaItem("Pepsi 2L", 0, 2.99, 75));
 		inventory.add(new nonMediaItem("Fresh Popcorn", 0, 9.99, -1));
+
+		// Make some customer accounts
+		customerAccounts
+				.add(new account("Homer Simpson", "742 Evergreen Terrace", "867-5309", customerAccounts.size()));
+		customerAccounts.add(new account("Bill Gates", "1 Microsoft Way", "555-1234", customerAccounts.size()));
+		customerAccounts.add(new account("Big Customer", "Small House", "No phone", customerAccounts.size()));
 	}
 }

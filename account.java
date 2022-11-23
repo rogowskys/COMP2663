@@ -9,10 +9,14 @@ public class account {
 	private String customerPhoneNumber;
 	private double accountBalance = 0.00;
 
-	public account(String customerName, String customerAddress, String customerPhoneNumber) {
+	public account(String customerName, String customerAddress, String customerPhoneNumber, int nextAccountID) {
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;
 		this.customerPhoneNumber = customerPhoneNumber;
+		accountID += nextAccountID;
+	}
+
+	public account() {
 	}
 
 	public int getAccountID() {
