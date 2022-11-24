@@ -98,8 +98,7 @@ public class posTerminal {
 	 * @return current transaction
 	 */
 	public static void makeNewTransaction() {
-		// TODO - implement posTerminal.makeNewTransaction
-		throw new UnsupportedOperationException();
+		transactionManagement.transactionManagementMenu(transactionRegister);
 	}
 
 	/**

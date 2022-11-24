@@ -3,11 +3,13 @@ import java.util.ArrayList;
 
 public class transactionManagement {
 
-    transaction newTransaction;
+    private transaction newTransaction;
+    private static Scanner scan = new Scanner(System.in);
+    private static String menuOption = "";
+    private account transactionCustomer;
 
-    public void transactionManagementMenu(ArrayList<transaction> transactionRegister) {
-        Scanner scan = new Scanner(System.in);
-        String menuOption = "";
+    public static void transactionManagementMenu(ArrayList<transaction> transactionRegister) {
+
         do {
             System.out.println("\n");
             System.out.println("Transaction Menu");
@@ -18,7 +20,7 @@ public class transactionManagement {
             menuOption = scan.nextLine();
             switch (menuOption.trim()) {
                 case "C":
-                    break;              
+                    break;
                 default:
                     System.out.println("Invalid Selection\n");
                     break;
@@ -26,23 +28,28 @@ public class transactionManagement {
         } while (!menuOption.equals("B"));
     }
 
-    void inTransactionOptions(){
+    void inTransactionOptions() {
 
     }
 
-    void createNewTransaction(){
-        newTransaction = new transaction();
-
-
+    void createNewTransaction() {
+        //Find the customer first to associate to the transaction
+        transactionCustomer = accountManagement.findCustomerAccount(posTerminal.customerAccounts, scan);
+        // Instantiate a new transaction
+        newTransaction = new transaction(transactionCustomer);
+        // Check for account fees
+        if (transactionCustomer.getAccountBalance() != 0.0){
+            System.out.println("Outstanding account fees found: "+ transactionCustomer.getAccountBalance());
+            System.out.println("Adding fees to transaction.");
+            newTransaction.addNewLineItem(new nonMediaItem("Account Fees", 0, transactionCustomer.getAccountBalance(), 0));
+        }
+        inTransactionOptions();
     }
 
     /**
      * Adds customer's account to their transaction.
      */
-    void addCutomerAccount() {
-        // TODO - implement Transaction.addCutomerAccount
-        throw new UnsupportedOperationException();
-    }
+
 
     /**
      * Adds balance to customer's account.
@@ -65,31 +72,6 @@ public class transactionManagement {
      */
     void removeLineItem() {
         // TODO - implement Transaction.removeLineItem
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Updates the current subtotal after each item is added.
-     */
-    void updateSubtotal() {
-        // TODO - implement Transaction.updateSubtotal
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Calculates the tax for the whole transaction.
-     */
-    void addTaxes() {
-        // TODO - implement Transaction.addTaxes
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Adds the subtotal and taxes together to calculate the total
-     * amount due by the customer.
-     */
-    void updateTotal() {
-        // TODO - implement Transaction.updateTotal
         throw new UnsupportedOperationException();
     }
 
