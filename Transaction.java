@@ -1,10 +1,10 @@
 /**
  * Creates and stores transactions.
  */
-public class Transaction {
+public class transaction {
 
-	int subTotal;
-	int taxes;
+	double subTotal;
+	double taxes;
 	int total;
 	int date;
 	int time;

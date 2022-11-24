@@ -8,8 +8,8 @@ public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();
 	public static ArrayList<nonMediaItem> inventory = new ArrayList<>();
 	public static ArrayList<account> customerAccounts = new ArrayList<>();
+	public static ArrayList<transaction> transactionRegister = new ArrayList<>();
 
-	// Main driver for posTerminal
 	/**
 	 * Main driver for the terminal.
 	 * 
@@ -20,7 +20,7 @@ public class posTerminal {
 		// Seed the 'database'
 		fillDatabaseWithData();
 
-		Scanner scan = new Scanner(System.in); // Capturing the input
+		Scanner scan = new Scanner(System.in); 
 		String menuOption = null;
 		boolean loggedIn = false;
 
@@ -36,9 +36,9 @@ public class posTerminal {
 			System.out.println("(N)ew sale/rental transaction");
 			System.out.println("(C)ustomer Account Management");
 			System.out.println("(M)anage inventory");
-			System.out.println("Create new (R)eservation");
+			System.out.println("(R)eservation");
 			System.out.println("(P)rint reports\n");
-			System.out.println("Q) (Q)uit");
+			System.out.println("(Q)uit");
 			menuOption = scan.next();
 			switch (menuOption.trim()) {
 				case "N":
@@ -58,10 +58,8 @@ public class posTerminal {
 					break;
 				default:
 					break;
-				// Add the rest of your cases
 			}
-		} while (!menuOption.equals("Q")); // quitting the program
-		return;
+		} while (!menuOption.equals("Q"));
 	}
 
 	/**
@@ -76,7 +74,7 @@ public class posTerminal {
 	 * Reports include: Inventory, Transactions,
 	 */
 	public static void generateReports() {
-		// TODO report menu method
+		reports.reportGenerationMenu();
 	}
 
 	/**
@@ -99,7 +97,7 @@ public class posTerminal {
 	 * 
 	 * @return current transaction
 	 */
-	public static Transaction makeNewTransaction() {
+	public static void makeNewTransaction() {
 		// TODO - implement posTerminal.makeNewTransaction
 		throw new UnsupportedOperationException();
 	}
@@ -118,7 +116,7 @@ public class posTerminal {
 	 * 
 	 * @return reservation
 	 */
-	public Reservation createReservation() {
+	public void createReservation() {
 		// TODO - implement posTerminal.createReservation
 		throw new UnsupportedOperationException();
 	}
@@ -133,13 +131,6 @@ public class posTerminal {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 */
-	public void endTransaction() {
-		// TODO - implement posTerminal.endTransaction
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * 
