@@ -3,17 +3,17 @@
  */
 public class account {
 
-	private int accountID = 100;
-	private String customerName;
-	private String customerAddress;
-	private String customerPhoneNumber;
-	private double accountBalance = 0.00;
+	private static int accountID = 100;
+	private static String customerName;
+	private static String customerAddress;
+	private static String customerPhoneNumber;
+	private static double accountBalance = 0.00;
 
 	public account(String customerName, String customerAddress, String customerPhoneNumber, int nextAccountID) {
-		this.customerName = customerName;
-		this.customerAddress = customerAddress;
-		this.customerPhoneNumber = customerPhoneNumber;
-		accountID += nextAccountID;
+		account.customerName = customerName;
+		account.customerAddress = customerAddress;
+		account.customerPhoneNumber = customerPhoneNumber;
+		account.accountID += nextAccountID;
 	}
 
 	public account() {
@@ -24,31 +24,31 @@ public class account {
 	}
 
 	public void setAccountID(int accountID) {
-		this.accountID = accountID;
+		account.accountID = accountID;
 	}
 
-	public String getCustomerName() {
+	public static String getCustomerName() {
 		return customerName;
 	}
 
 	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+		account.customerName = customerName;
 	}
 
-	public String getCustomerAddress() {
+	public static String getCustomerAddress() {
 		return customerAddress;
 	}
 
 	public void setCustomerAddress(String customerAddress) {
-		this.customerAddress = customerAddress;
+		account.customerAddress = customerAddress;
 	}
 
-	public String getCustomerPhoneNumber() {
+	public static String getCustomerPhoneNumber() {
 		return customerPhoneNumber;
 	}
 
 	public void setCustomerPhoneNumber(String customerPhoneNumber) {
-		this.customerPhoneNumber = customerPhoneNumber;
+		account.customerPhoneNumber = customerPhoneNumber;
 	}
 
 	public double getAccountBalance() {
@@ -56,7 +56,7 @@ public class account {
 	}
 
 	public void setAccountBalance(double accountBalance) {
-		this.accountBalance = accountBalance;
+		account.accountBalance = accountBalance;
 	}
 
 	public String toString() {

@@ -54,8 +54,46 @@ public class accountManagement {
 	 * @param scan
 	 */
 	static void updateCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
-		// TODO - implement Account.updateCustomerAccount
-		throw new UnsupportedOperationException();
+		account accountToUpdate = findCustomerAccount(customerAccounts, scan);
+		String fieldToUpdate = "";
+		String menuSelection = "";
+
+		do {
+			System.out.println("\nSelect field to update:");
+			System.out.println("(N)ame, (A)ddress, (P)hone Number, or (D)one");
+			menuSelection = scan.nextLine();
+			switch (menuSelection.trim()) {
+				case "N":
+					System.out.println("Existing Name: " + account.getCustomerName());
+					System.out.println("New Name:");
+					fieldToUpdate = scan.nextLine();
+					System.out.println("\nUpdating to :" + fieldToUpdate);
+					accountToUpdate.setCustomerName(fieldToUpdate);
+					System.out.println("Done.");
+					break;
+				case "A":
+					System.out.println("Existing Address: " + account.getCustomerAddress());
+					System.out.println("New Address:");
+					fieldToUpdate = scan.nextLine();
+					System.out.println("\nUpdating to :" + fieldToUpdate);
+					accountToUpdate.setCustomerAddress(fieldToUpdate);
+					System.out.println("Done.");
+					break;
+				case "P":
+					System.out.println("Existing Phone Number: " + account.getCustomerPhoneNumber());
+					System.out.println("New Phone Number:");
+					fieldToUpdate = scan.nextLine();
+					System.out.println("\nUpdating to :" + fieldToUpdate);
+					accountToUpdate.setCustomerPhoneNumber(fieldToUpdate);
+					System.out.println("Done.");
+					break;
+			}
+
+		} while (!menuSelection.equals("D"));
+		System.out.println("\nUpdated Account Details:");
+		System.out.println("Account No.\tCustomer Name\tPhone Number\tAccount Balance");
+		System.out.println(accountToUpdate + "\n\n");
+
 	}
 
 	/**
