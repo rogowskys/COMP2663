@@ -1,77 +1,52 @@
-/**
- * Creates and stores transactions.
- */
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 public class transaction {
 
-	double subTotal;
-	double taxes;
-	int total;
-	int date;
-	int time;
+	final double TAXRATE = 0.15;
 
-	/**
-	 * Adds customer's account to their transaction.
-	 */
-	void addCutomerAccount() {
-		// TODO - implement Transaction.addCutomerAccount
-		throw new UnsupportedOperationException();
+	private ArrayList<Item> transactionLineItems = new ArrayList<>();
+	private double subTotal;
+	private double taxes;
+	private double total;
+	private LocalDate date;
+	private LocalTime time;
+
+	public transaction() {
+		date = LocalDate.now();
+		time = LocalTime.now();
 	}
 
-	/**
-	 * Adds balance to customer's account.
-	 */
-	void addCustomerBalance() {
-		// TODO - implement Transaction.addCustomerBalance
-		throw new UnsupportedOperationException();
+	public void addNewLineItem(Item newLineItem) {
+		transactionLineItems.add(newLineItem);
+		subTotal += newLineItem.getPrice();
+		taxes = subTotal * TAXRATE;
+		total = subTotal + taxes;
 	}
 
-	/**
-	 * Adds a new item to transaction.
-	 */
-	void addNewLineItem() {
-		// TODO - implement Transaction.addNewLineItem
-		throw new UnsupportedOperationException();
+	public ArrayList<Item> getTransactionLineItems(int index) {
+		return transactionLineItems;
 	}
 
-	/**
-	 * Removes an item from the transaction.
-	 */
-	void removeLineItem() {
-		// TODO - implement Transaction.removeLineItem
-		throw new UnsupportedOperationException();
+	public double getSubTotal() {
+		return subTotal;
 	}
 
-	/**
-	 * Updates the current subtotal after each item is added.
-	 */
-	void updateSubtotal() {
-		// TODO - implement Transaction.updateSubtotal
-		throw new UnsupportedOperationException();
+	public double getTaxes() {
+		return taxes;
 	}
 
-	/**
-	 * Calculates the tax for the whole transaction.
-	 */
-	void addTaxes() {
-		// TODO - implement Transaction.addTaxes
-		throw new UnsupportedOperationException();
+	public double getTotal() {
+		return total;
 	}
 
-	/**
-	 * Adds the subtotal and taxes together to calculate the total
-	 * amount due by the customer.
-	 */
-	void updateTotal() {
-		// TODO - implement Transaction.updateTotal
-		throw new UnsupportedOperationException();
+	public LocalDate getDate() {
+		return date;
 	}
 
-	/**
-	 * Processes the payment by the customer.
-	 */
-	void processPayment() {
-		// TODO - implement Transaction.processPayment
-		throw new UnsupportedOperationException();
+	public LocalTime getTime() {
+		return time;
 	}
 
 }
