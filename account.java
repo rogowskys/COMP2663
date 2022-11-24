@@ -24,7 +24,7 @@ public class account {
 	}
 
 	public void setAccountID(int accountID) {
-		this.accountID = accountID;
+		this.accountID += accountID;
 	}
 
 	public String getCustomerName() {

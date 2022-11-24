@@ -11,18 +11,18 @@ public class accountManagement {
 	 * 
 	 * @param customerAccounts
 	 */
-	public void accountManagementMenu(ArrayList<account> customerAccounts) {
+	public static void accountManagementMenu(ArrayList<account> customerAccounts) {
 		Scanner scan = new Scanner(System.in);
 		String menuOption = null;
 		do {
-			System.out.println("\n\n");
+			System.out.println("\n");
 			System.out.println("_______________________");
 			System.out.println("Customer Managment Menu");
 			System.out.println("_______________________\n");
 			System.out.println("(C)reate New Account");
 			System.out.println("(U)pdate A Customer Account");
 			System.out.println("(D)isplay All Customer Accounts");
-			System.out.println("(S)earch for Cutsomer Account\n");
+			System.out.println("(S)earch for Customer Account\n");
 			System.out.println("(B)ack");
 
 			System.out.println("Selection:");
@@ -53,7 +53,7 @@ public class accountManagement {
 	 * @param customerAccounts
 	 * @param scan
 	 */
-	void updateCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
+	static void updateCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
 		account accountToUpdate = findCustomerAccount(customerAccounts, scan);
 		String fieldToUpdate = "";
 		String menuSelection = "";
@@ -83,7 +83,7 @@ public class accountManagement {
 					System.out.println("Existing Phone Number: " + accountToUpdate.getCustomerPhoneNumber());
 					System.out.println("New Phone Number:");
 					fieldToUpdate = scan.nextLine();
-					System.out.println("\nUpdating to :" + fieldToUpdate);
+					System.out.println("\nUpdating to: " + fieldToUpdate);
 					accountToUpdate.setCustomerPhoneNumber(fieldToUpdate);
 					System.out.println("Done.");
 					break;
@@ -118,8 +118,6 @@ public class accountManagement {
 					System.out.println("Customer Found:");
 					System.out.println(searchCustomer);
 					return searchCustomer;
-				} else {
-					System.out.println("Not found");
 				}
 			}
 		} else if (searchSelection.equals("P")) {
@@ -131,8 +129,6 @@ public class accountManagement {
 					System.out.println("Customer Found:");
 					System.out.println(searchCustomer);
 					return searchCustomer;
-				} else {
-					System.out.println("Not found");
 				}
 			}
 		}
@@ -160,7 +156,7 @@ public class accountManagement {
 		newCustomer.setAccountID(customerAccounts.size());
 
 		customerAccounts.add(newCustomer);
-		System.out.println("New Customer Added.\n\n");
+		System.out.println("\nNew Customer Added.\n\n");
 
 	}
 }
