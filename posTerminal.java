@@ -10,10 +10,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Driver class to execute the terminal.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -82,7 +81,7 @@ public class posTerminal {
 	}
 
 	/**
-	 * Allows an account to be updated.
+	 * Allows a customer account to be updated.
 	 */
 	public static void manageCustomerAccount() {
 		accountManagement.accountManagementMenu(customerAccounts);
@@ -90,16 +89,16 @@ public class posTerminal {
 
 	/**
 	 * Allows reports to be created.
-	 * Reports include: Inventory, Transactions,
+	 * Reports include: Inventory, Transactions, and Accounts
 	 */
 	public static void generateReports() {
 		reports.reportGenerationMenu();
 	}
 
 	/**
-	 * Allows system user to enter their username to have access.
+	 * Allows system's user to enter their username to gain access.
 	 * 
-	 * @param employeeID username of employee trying to use the system
+	 * @param employeeID username of employee using the system
 	 */
 	private static boolean loginUser(String employeeID) {
 		if (Staff.isEmployeeID(employeeID)) {
@@ -121,7 +120,7 @@ public class posTerminal {
 	}
 
 	/**
-	 *
+	 * Allows inventory to be modified.
 	 */
 	public void manageInventory() {
 		// TODO - implement posTerminal.manageInventory

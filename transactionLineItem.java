@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Transaction line item class adds an item to the transaction in progress.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -29,9 +28,9 @@ public class transactionLineItem {
     }
 
     /**
-     * Processes item through transaction.
+     * Processes item to be added to the current transaction.
      *
-     * @param transactionLineItem item to be processed
+     * @param transactionLineItem item to be added to transaction
      * @param quantity quantity of item
      */
     public transactionLineItem(Item transactionLineItem, int quantity) {

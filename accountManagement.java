@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Account management class searches for, adds, modifies and removes customer accounts.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -15,7 +14,7 @@ public class accountManagement {
 	/**
 	 * Creates a menu for the customer accounts system.
 	 * 
-	 * @param customerAccounts
+	 * @param customerAccounts account of this customer
 	 */
 	public static void accountManagementMenu(ArrayList<account> customerAccounts) {
 		Scanner scan = new Scanner(System.in);

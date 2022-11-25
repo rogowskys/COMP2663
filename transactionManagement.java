@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Transaction management class creates a transaction, modify the transaction, and processes the payment.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -155,8 +154,6 @@ public class transactionManagement {
 
     /**
      * Processes the payment by the customer.
-     * 
-     * @param d amount due by customer to be processed
      */
     static void processPayment() {
         int menuOption;

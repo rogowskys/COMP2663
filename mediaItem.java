@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Media item class creates media type items.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -22,7 +21,7 @@ public class mediaItem extends Item {
 	}
 
 	/**
-	 * Adds a new media item.
+	 * Creates a new media item.
 	 *
 	 * @param UPC universal product code for this media item
 	 * @param price price of this media item

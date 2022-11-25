@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Non-media item class creates non-media type items.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -12,7 +11,7 @@ public class nonMediaItem extends Item {
 	private String description;
 
 	/**
-	 * Adds a new non-media item.
+	 * Creates a new non-media item.
 	 *
 	 * @param description description of this non-media item
 	 * @param UPC universal product code of this non-media item
