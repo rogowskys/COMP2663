@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Transaction class calculates the price of transaction when items are added or removed.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -27,17 +26,33 @@ public class transaction {
 
 	DecimalFormat dfrmt = new DecimalFormat("#.##");
 
+	/**
+	 * Adds customer's account to the current transaction.
+	 *
+	 * @param customerAccount account for this customer
+	 */
 	public transaction(account customerAccount) {
 		this.customerAccount = customerAccount;
 		date = LocalDate.now();
 		time = LocalTime.now();
 	}
 
+	/**
+	 * Add new item to transaction.
+	 *
+	 * @param newLineItem item to add to transaction
+	 * @param quantity quantity of item
+	 */
 	public void addNewLineItem(Item newLineItem, int quantity) {
 		transactionLineItems.add(new transactionLineItem(newLineItem, quantity));
 		updateTotals();
 	}
 
+	/**
+	 * Removes unwanted item from transaction.
+	 *
+	 * @param index line that item is to be removed from
+	 */
 	public void removeLineItem(int index) {
 		transactionLineItems.remove(index);
 		updateTotals();
@@ -45,7 +60,7 @@ public class transaction {
 	}
 
 	/**
-	 * Zero out the dollar ammounts and iterate through each line item to determine
+	 * Zero out the dollar amounts and iterate through each line item to determine
 	 * the new dollar values for the totals and taxes.
 	 */
 	public void updateTotals() {

@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Payment class allows the payment of a transaction to be processed.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -32,6 +31,12 @@ public class Payment {
 		this.paymentMethod = paymentMethod;
 	}
 
+	/**
+	 * Processes the amount and type of payment for this transaction's payment.
+	 *
+	 * @param amount amount due by customer for this transaction
+	 * @param paymentMethod method of payment for this transaction
+	 */
 	public Payment(double amount, paymentType paymentMethod) {
 		this.amount = amount;
 		this.paymentMethod = paymentMethod;

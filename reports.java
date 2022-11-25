@@ -1,8 +1,7 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Reports class prints out all data in selected report type.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None that we are aware of.
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
@@ -13,7 +12,7 @@ import java.util.Scanner;
 public class reports {
 
 	/**
-	 * Allows options to be selected via a menu.
+	 * Creates a menu for report options.
 	 */
 	public static void reportGenerationMenu() {
 		Scanner scan = new Scanner(System.in);

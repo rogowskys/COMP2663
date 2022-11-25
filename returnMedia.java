@@ -1,8 +1,8 @@
 /**
- * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. )
+ * Return media class allows media to be removed from customer's account and added back into the
+ * inventory system.
  *
- * Bugs: (a list of bugs and other problems)
+ * Bugs: None
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
