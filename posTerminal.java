@@ -84,7 +84,7 @@ public class posTerminal {
 	 */
 	private static boolean loginUser(String employeeID) {
 		if (Staff.isEmployeeID(employeeID)) {
-			System.out.println("Welcome, " + employeeID);
+			System.out.println("Welcome, " + employeeID + "\n");
 			return true;
 		} else {
 			System.out.println("Invalid login.");

@@ -16,7 +16,7 @@ public class reports {
 			System.out.println("_______________________");
 			System.out.println("POS Reports Menu");
 			System.out.println("_______________________\n");
-			System.out.println("(Transcation Report");
+			System.out.println("(Transaction Report");
 			System.out.println("(C)ustomer Accounts Report");
 			System.out.println("(M)edia Inventory Report");
 			System.out.println("(N)on Media Inventory Report\n");
