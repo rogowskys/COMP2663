@@ -17,8 +17,7 @@ Sean Rogowsky (134715r) <134715r@ACADIAU.CA>
 
 /**
  * (Write a succinct description of this class here. You should avoid
- * wordiness and redundancy. If necessary, additional paragraphs should
- * be preceded by <p>, the html tag for a new paragraph.)
+ * wordiness and redundancy. )
  *
  * Bugs: (a list of bugs and other problems)
  * 
