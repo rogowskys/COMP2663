@@ -20,7 +20,7 @@ public class posTerminal {
 		// Seed the 'database'
 		fillDatabaseWithData();
 
-		Scanner scan = new Scanner(System.in); 
+		Scanner scan = new Scanner(System.in);
 		String menuOption = null;
 		boolean loggedIn = false;
 
@@ -130,19 +130,18 @@ public class posTerminal {
 		throw new UnsupportedOperationException();
 	}
 
-
 	/**
 	 * Creates and stores data for system's database
 	 */
 	private static void fillDatabaseWithData() {
 		// Make some inventory
-		mediaInventory.add(new mediaItem(575200221, 0.93, 2, "David and Lisa", "habitasse", "Web Jeske", "Gay Montford",
+		mediaInventory.add(new mediaItem(100, 0.93, 2, "David and Lisa", "habitasse", "Web Jeske", "Gay Montford",
 				"Alidia Maffione", 7, mediaType.DVD));
-		mediaInventory.add(new mediaItem(41190319, 6.27, 8, "Jurassic Park",
+		mediaInventory.add(new mediaItem(101, 6.27, 8, "Jurassic Park",
 				"nisi venenatis", "Melvin Rozenzweig", "Errol Monteath", "Eirena Daudray", 5, mediaType.DVD));
-		mediaInventory.add(new mediaItem(57627136, 3.99, 9, "Top Gun ", "sit amet", "Cleavland Deny",
+		mediaInventory.add(new mediaItem(102, 3.99, 9, "Top Gun ", "sit amet", "Cleavland Deny",
 				"Ignazio Floyed", "Amory Finan", 6, mediaType.DVD));
-		mediaInventory.add(new mediaItem(62362184, 4.75, 6, "Stuff and Dough", "vehicula",
+		mediaInventory.add(new mediaItem(103, 4.75, 6, "Stuff and Dough", "vehicula",
 				"Corrianne Hawton", "Jeniffer Cork", "Brinn Jedrzaszkiewicz", 2, mediaType.DVD));
 
 		// Make some more inventory
@@ -155,5 +154,10 @@ public class posTerminal {
 				.add(new account("Homer Simpson", "742 Evergreen Terrace", "867-5309", customerAccounts.size()));
 		customerAccounts.add(new account("Bill Gates", "1 Microsoft Way", "555-1234", customerAccounts.size()));
 		customerAccounts.add(new account("Big Customer", "Small House", "No phone", customerAccounts.size()));
-	}
+		customerAccounts.add(new account("Elon Musk", "1 Mars Way", "999-9999", customerAccounts.size()));
+		// Add some overdue fees for Elon
+		customerAccounts.get(3).setAccountBalance(4.99);
+
+
+		}
 }

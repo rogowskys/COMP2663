@@ -3,12 +3,35 @@
  */
 public class Payment {
 
-	int amount;
-	int paymentType;
+	double amount;
+	paymentType paymentMethod;
 
-	void openDrawer() {
-		// TODO - implement Payment.openDrawer
-		throw new UnsupportedOperationException();
+	private void openDrawer() {
+		System.out.println("--- Beep Boop.. Cash Drawer Opened ---\n");
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public paymentType getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(paymentType paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	public Payment(double amount, paymentType paymentMethod) {
+		this.amount = amount;
+		this.paymentMethod = paymentMethod;
+		if (paymentMethod == paymentType.cash){
+			openDrawer();
+		}
 	}
 
 }

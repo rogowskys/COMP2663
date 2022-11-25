@@ -14,6 +14,7 @@ public class transaction {
 	private double total;
 	private LocalDate date;
 	private LocalTime time;
+	private Payment customerPayment;
 
 	DecimalFormat dfrmt = new DecimalFormat("#.##");
 
@@ -25,14 +26,27 @@ public class transaction {
 
 	public void addNewLineItem(Item newLineItem, int quantity) {
 		transactionLineItems.add(new transactionLineItem(newLineItem, quantity));
-		subTotal += (newLineItem.getPrice() * quantity);
-		taxes = subTotal * TAXRATE;
-		total = subTotal + taxes;
+		updateTotals();
 	}
 
 	public void removeLineItem(int index) {
 		transactionLineItems.remove(index);
+		updateTotals();
 		System.out.println("Line " + index + " removed.");
+	}
+
+	/**
+	 * Zero out the dollar ammounts and iterate through each line item to determine
+	 * the new dollar values for the totals and taxes.
+	 */
+	public void updateTotals() {
+		subTotal = taxes = total = 0;
+		for (int i = 0; i < transactionLineItems.size(); i++) {
+			subTotal += (transactionLineItems.get(i).getTransactionLineItem().getPrice() *
+					transactionLineItems.get(i).getQuantity());
+		}
+		taxes = subTotal * TAXRATE;
+		total = subTotal + taxes;
 	}
 
 	public Item getLineItem(int index) {
@@ -65,6 +79,14 @@ public class transaction {
 		return time;
 	}
 
+	public Payment getCustomerPayment() {
+		return customerPayment;
+	}
+
+	public void setCustomerPayment(Payment customerPayment) {
+		this.customerPayment = customerPayment;
+	}
+
 	@Override
 	public String toString() {
 		String transactionPrintout = "";
@@ -73,17 +95,25 @@ public class transaction {
 		transactionPrintout += "\nDate: " + date + " Time: " + time;
 		transactionPrintout += "\n\n";
 		transactionPrintout += "#\tDescription/Title\tQuantity\tTotal\tDue Date\n";
-		//Dear god I hope this works.
+		// Dear god I hope this works.
 		for (int i = 0; i < transactionLineItems.size(); i++) {
 			transactionPrintout += i + "\t" +
 					getLineItem(i).description + "\t\t" + getTransactionLineItems(i).getQuantity() +
-					"\t\t" + getLineItem(i).getPrice() * getTransactionLineItems(i).getQuantity() + 
-					"\t" + "TODO\n";
+					"\t\t$" + getLineItem(i).getPrice() * getTransactionLineItems(i).getQuantity() +
+					"\t";
+			if (getLineItem(i) instanceof mediaItem) {
+				transactionPrintout += ((mediaItem) getLineItem(i)).getRentalLength() + " Days";
+			}
+			transactionPrintout += "\n";
 		}
 		transactionPrintout += "\n\nSubtotal: $" + dfrmt.format(subTotal) + "\n";
 		transactionPrintout += "Taxes: $" + dfrmt.format(taxes) + "\n";
 		transactionPrintout += "Total: $" + dfrmt.format(total) + "\n";
 
+		if (customerPayment != null) {
+			transactionPrintout += "Payment Made: " + dfrmt.format(customerPayment.amount) + "\n";
+			transactionPrintout += "Payment Type: " + customerPayment.paymentMethod + "\n";
+		}
 
 		return transactionPrintout;
 	}

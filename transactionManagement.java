@@ -31,7 +31,7 @@ public class transactionManagement {
                     createNewTransaction();
                     inTransaction();
                     if (newTransaction != null) { // Not voided transaction.
-                        processPayment(newTransaction.getTotal());
+                        processPayment();
                         transactionRegister.add(newTransaction);
                     }
                     return;
@@ -78,6 +78,7 @@ public class transactionManagement {
                     transactionComplete = true;
                     return;
                 case 4:
+                    processPayment();
                     transactionComplete = true;
                     break;
                 default:
@@ -146,12 +147,38 @@ public class transactionManagement {
      * 
      * @param d amount due by customer to be processed
      */
-    static void processPayment(double d) {
-        // TODO - implement Transaction.processPayment
-        throw new UnsupportedOperationException();
+    static void processPayment() {
+        int menuOption;
+        boolean paymentMade = false;
+
+        System.out.println("\nSelect Payment Method:");
+        System.out.println("\n1 - Cash, 2 - Debit Card, 3 - Credit Card");
+        menuOption = scan.nextInt();
+        do {
+            switch (menuOption) {
+                case 1:
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.cash));
+                    paymentMade = true;
+                    break;
+                case 2:
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.debitCard));
+                    paymentMade = true;
+                    break;
+                case 3:
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.creditCard));
+                    paymentMade = true;
+                    break;
+                default:
+                    System.out.println("Invalid Selection\n");
+                    break;
+            }
+        } while (!paymentMade);
     }
 
+    /**
+     * null out the new transaction object for the garbage collector
+     */
     static void terminateTransaction() {
-        newTransaction = null; // null out the new transaction object for the garbage collector.
+        newTransaction = null;
     }
 }
