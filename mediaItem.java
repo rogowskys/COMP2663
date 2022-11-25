@@ -28,12 +28,13 @@ public class mediaItem extends Item {
 	 * @param rentalLength time period that this media item can be rented
 	 * @param typeOfMedia media type of this item
 	 */
-	public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
+	
+	 public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
 			String director,
 			String producer, int rentalLength, mediaType typeOfMedia) {
-		this.UPC = UPC;
-		this.price = price;
-		this.inventoryCount = inventoryCount;
+		super.UPC = UPC;
+		super.price = price;
+		super.inventoryCount = inventoryCount;
 		this.title = title;
 		this.location = location;
 		this.actors = actors;
@@ -41,6 +42,7 @@ public class mediaItem extends Item {
 		this.producer = producer;
 		this.rentalLength = rentalLength;
 		this.typeOfMedia = typeOfMedia;
+		super.description = title;
 
 	}
 
@@ -100,6 +102,7 @@ public class mediaItem extends Item {
 		this.producer = producer;
 	}
 
+	@Override
 	public String toString() {
 		return title + "\t\t\t" + UPC + "\t$" + price + "\t" + typeOfMedia;
 	}

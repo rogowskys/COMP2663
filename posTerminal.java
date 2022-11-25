@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();
-	public static ArrayList<nonMediaItem> inventory = new ArrayList<>();
+	public static ArrayList<Item> inventory = new ArrayList<>();
 	public static ArrayList<account> customerAccounts = new ArrayList<>();
 	public static ArrayList<transaction> transactionRegister = new ArrayList<>();
 
@@ -146,9 +146,9 @@ public class posTerminal {
 				"Corrianne Hawton", "Jeniffer Cork", "Brinn Jedrzaszkiewicz", 2, mediaType.DVD));
 
 		// Make some more inventory
-		inventory.add(new nonMediaItem("Doritos 454g", 0, 5.99, 50));
-		inventory.add(new nonMediaItem("Pepsi 2L", 0, 2.99, 75));
-		inventory.add(new nonMediaItem("Fresh Popcorn", 0, 9.99, -1));
+		inventory.add(new Item("Doritos 454g", 12, 5.99, 50));
+		inventory.add(new Item("Pepsi 2L", 13, 2.99, 75));
+		inventory.add(new Item("Fresh Popcorn", 14, 9.99, -1));
 
 		// Make some customer accounts
 		customerAccounts
