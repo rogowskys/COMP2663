@@ -18,7 +18,7 @@
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
 
- 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -52,7 +52,7 @@ public class posTerminal {
 		do {
 			System.out.println("\n\n");
 			System.out.println("--- Main Menu ---");
-			System.out.println("(N)ew sale/rental transaction");
+			System.out.println("(S) Sale/Rental Transaction");
 			System.out.println("(C)ustomer Account Management");
 			System.out.println("(M)anage inventory\t <Not Implemented>");
 			System.out.println("(R)eservation\t <Not Implemented>");
@@ -60,8 +60,8 @@ public class posTerminal {
 			System.out.println("(Q)uit");
 			menuOption = scan.next();
 			switch (menuOption.trim()) {
-				case "N":
-					makeNewTransaction();
+				case "S":
+					processTransactions();
 					break;
 				case "C":
 					manageCustomerAccount();
@@ -116,7 +116,7 @@ public class posTerminal {
 	 * 
 	 * @return current transaction
 	 */
-	public static void makeNewTransaction() {
+	public static void processTransactions() {
 		transactionManagement.transactionManagementMenu(transactionRegister);
 	}
 

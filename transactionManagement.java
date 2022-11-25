@@ -7,7 +7,7 @@
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
 
- 
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -30,6 +30,7 @@ public class transactionManagement {
             System.out.println("Transaction Menu");
             System.out.println("_______________________\n");
             System.out.println("(C)reate new transaction\n");
+            System.out.println("(R)return Media\t<Not Implemented>");
             System.out.println("(B)ack\n");
             System.out.println("Selection:");
             menuOption = scan.nextLine();
@@ -42,6 +43,9 @@ public class transactionManagement {
                         transactionRegister.add(newTransaction);
                     }
                     return;
+                case "R":
+                    //TODO Make it go.
+                    break;
                 default:
                     System.out.println("Invalid Selection\n");
                     break;
