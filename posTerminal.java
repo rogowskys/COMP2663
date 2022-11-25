@@ -1,9 +1,28 @@
+///////////////////////////////////////////////////////////////////////////////
+//                  
+// Title:            Blockblunder Video POS Terminal
+// Purpose:          COMP2663 Assignment 4
+// 
+// Authors:          Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and
+//                   Sean Rogowsky (134715r) <134715r@ACADIAU.CA> 
+// Main Class File:  posTerminal.java
+//
+///////////////////////////////////////////////////////////////////////////////
+
+/**
+ * (Write a succinct description of this class here. You should avoid
+ * wordiness and redundancy. )
+ *
+ * Bugs: (a list of bugs and other problems)
+ * 
+ * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
+ */
+
+ 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Allows the system to operate.
- */
+
 public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();
 	public static ArrayList<Item> inventory = new ArrayList<>();
