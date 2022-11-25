@@ -81,7 +81,7 @@ public class transactionManagement {
             System.out.println("Outstanding account fees found: " + transactionCustomer.getAccountBalance());
             System.out.println("Adding fees to transaction.");
             newTransaction
-                    .addNewLineItem(new Item("Account Fees", 0, transactionCustomer.getAccountBalance(), 0));
+                    .addNewLineItem(new Item("Account Fees", 0, transactionCustomer.getAccountBalance(), 0), 1);
         }
     }
 
@@ -90,40 +90,40 @@ public class transactionManagement {
      */
     static void addNewLineItem() {
         int UPC;
-        mediaItem mediaLineItem;
         Item lineItem;
+        int quantity;
 
         System.out.println("Enter/Scan UPC:");
         UPC = scan.nextInt();
         System.out.println("Beep");
+        System.out.println("Enter Quantity:");
+        quantity = scan.nextInt();
         // Scan through media inventory first
         for (int i = 0; i < posTerminal.mediaInventory.size(); i++) {
-            mediaLineItem = posTerminal.mediaInventory.get(i);
-            if (UPC == mediaLineItem.getUPC()) {
-                newTransaction.addNewLineItem(mediaLineItem);
-                System.out.println(mediaLineItem.getTitle() + " Added");
-                return;
-            }
-        }
-        // Then scan through non- media inventory. Boy I wish I would have made them the
-        // same type at this point.
-        for (int i = 0; i < posTerminal.inventory.size(); i++) {
-            lineItem = posTerminal.inventory.get(i);
+            lineItem = posTerminal.mediaInventory.get(i);
             if (UPC == lineItem.getUPC()) {
-                newTransaction.addNewLineItem(lineItem);
+                newTransaction.addNewLineItem(lineItem, quantity);
                 System.out.println(lineItem.getDescription() + " Added");
                 return;
             }
         }
-
+        // Then scan through non-media inventory. Boy I wish I would have made them the
+        // same type at this point.
+        for (int i = 0; i < posTerminal.inventory.size(); i++) {
+            lineItem = posTerminal.inventory.get(i);
+            if (UPC == lineItem.getUPC()) {
+                newTransaction.addNewLineItem(lineItem, quantity);
+                System.out.println(lineItem.getDescription() + " Added");
+                return;
+            }
+        }
     }
 
     /**
      * Removes an item from the transaction.
      */
     static void removeLineItem(int lineNumber) {
-        // TODO - implement Transaction.removeLineItem
-        throw new UnsupportedOperationException();
+        newTransaction.removeLineItem(lineNumber);
     }
 
     /**
@@ -138,6 +138,5 @@ public class transactionManagement {
 
     static void terminateTransaction() {
         newTransaction = null; // null out the new transaction object for the garbage collector.
-        // TODO - other stuff maybe?
     }
 }

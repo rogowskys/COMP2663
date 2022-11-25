@@ -6,7 +6,7 @@ public class transaction {
 
 	final double TAXRATE = 0.15;
 
-	private ArrayList<Item> transactionLineItems = new ArrayList<>();
+	private ArrayList<transactionLineItem> transactionLineItems = new ArrayList<>();
 	private account customerAccount;
 	private double subTotal;
 	private double taxes;
@@ -20,15 +20,26 @@ public class transaction {
 		time = LocalTime.now();
 	}
 
-	public void addNewLineItem(Item newLineItem) {
-		transactionLineItems.add(newLineItem);
-		subTotal += newLineItem.getPrice();
+	public void addNewLineItem(Item newLineItem, int quantity) {
+		transactionLineItems.add(new transactionLineItem(newLineItem, quantity));
+		subTotal += (newLineItem.getPrice() * quantity);
 		taxes = subTotal * TAXRATE;
 		total = subTotal + taxes;
 	}
 
-	public ArrayList<Item> getTransactionLineItems(int index) {
-		return transactionLineItems;
+	public void removeLineItem(int index) {
+		transactionLineItems.remove(index);
+		System.out.println("Line " + index + " removed.");
+	}
+
+	public Item getLineItem(int index) {
+		transactionLineItem lineToReturn = transactionLineItems.get(index);
+		Item itemToReturn = lineToReturn.getTransactionLineItem();
+		return itemToReturn;
+	}
+
+	public transactionLineItem getTransactionLineItems(int index) {
+		return transactionLineItems.get(index);
 	}
 
 	public double getSubTotal() {
@@ -53,11 +64,21 @@ public class transaction {
 
 	@Override
 	public String toString() {
-		//TODO Make this pretty
-		return "transaction [transactionLineItems=" + transactionLineItems + ", customerAccount=" + customerAccount
-				+ ", subTotal=" + subTotal + ", taxes=" + taxes + ", total=" + total + ", date=" + date + ", time="
-				+ time + "]";
+		String transactionPrintout = "";
+
+		transactionPrintout += "Transaction for Customer: " + customerAccount.getCustomerName();
+		transactionPrintout += "\n Date: " + date + " Time: " + time;
+		transactionPrintout += "\n\n";
+		transactionPrintout += "#\tDescription/Title\t\tQuantity\tTotal\n";
+		//Dear god I hope this works.
+		for (int i = 0; i < transactionLineItems.size(); i++) {
+			transactionPrintout += i + "\t" +
+					getLineItem(i).description + "\t" + getTransactionLineItems(i).getQuantity() +
+					"\t" + getLineItem(i).getPrice() * getTransactionLineItems(i).getQuantity() + "\n";
+		}
+
+
+		return transactionPrintout;
 	}
 
-	
 }

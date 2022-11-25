@@ -3,10 +3,10 @@
  */
 public class Item {
 
-	private int UPC;
-	private double price;
-	private int inventoryCount;
-	private String description;
+	protected int UPC;
+	protected double price;
+	protected int inventoryCount;
+	protected String description;
 
 	public Item(String description, int UPC, double price, int inventoryCount) {
 		this.UPC = UPC;
@@ -34,8 +34,8 @@ public class Item {
 		this.UPC = UPC;
 	}
 
-	public void setInventoryCount(int inventoryCount) {
-		this.inventoryCount = inventoryCount;
+	public void setInventoryCount(int countAdjustment) {
+		inventoryCount += countAdjustment;
 	}
 
 	public void setPrice(double price) {
@@ -44,7 +44,6 @@ public class Item {
 
 	public String toString() {
 		return description + "\t$" + price + "\t" + inventoryCount + "\t" + UPC;
-
 	}
 
 	public String getDescription() {
