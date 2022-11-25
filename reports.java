@@ -6,6 +6,9 @@ import java.util.Scanner;
  */
 public class reports {
 
+	/**
+	 * Allows options to be selected via a menu.
+	 */
 	public static void reportGenerationMenu() {
 		Scanner scan = new Scanner(System.in);
 		String menuOption;
@@ -16,7 +19,7 @@ public class reports {
 			System.out.println("_______________________");
 			System.out.println("POS Reports Menu");
 			System.out.println("_______________________\n");
-			System.out.println("(Transaction Report");
+			System.out.println("Transaction Report");
 			System.out.println("(C)ustomer Accounts Report");
 			System.out.println("(M)edia Inventory Report");
 			System.out.println("(N)on Media Inventory Report\n");

@@ -63,7 +63,7 @@ public class posTerminal {
 	}
 
 	/**
-	 * 
+	 * Allows an account to be updated.
 	 */
 	public static void manageCustomerAccount() {
 		accountManagement.accountManagementMenu(customerAccounts);
@@ -132,7 +132,7 @@ public class posTerminal {
 
 
 	/**
-	 * 
+	 * Creates and stores data for system's database
 	 */
 	private static void fillDatabaseWithData() {
 		// Make some inventory

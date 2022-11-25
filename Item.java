@@ -1,5 +1,5 @@
 /**
- * Creates an item.
+ * Allows an item to be created.
  */
 public class Item {
 
@@ -8,6 +8,14 @@ public class Item {
 	protected int inventoryCount;
 	protected String description;
 
+	/**
+	 * Creates and stores data for each item.
+	 *
+	 * @param description description of this item
+	 * @param UPC universal product code for this item
+	 * @param price price of this item
+	 * @param inventoryCount number of this item currently in inventory
+	 */
 	public Item(String description, int UPC, double price, int inventoryCount) {
 		this.UPC = UPC;
 		this.price = price;
