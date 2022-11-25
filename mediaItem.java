@@ -17,6 +17,7 @@ public class mediaItem extends Item {
 
 	/**
 	 * Adds a new media item.
+	 *
 	 * @param UPC universal product code for this media item
 	 * @param price price of this media item
 	 * @param inventoryCount number of this media item in inventory
@@ -28,7 +29,6 @@ public class mediaItem extends Item {
 	 * @param rentalLength time period that this media item can be rented
 	 * @param typeOfMedia media type of this item
 	 */
-	
 	 public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
 			String director,
 			String producer, int rentalLength, mediaType typeOfMedia) {

@@ -11,6 +11,7 @@ public class Staff {
 
 	/**
 	 * Verifies ID.
+	 *
 	 * @param idToValidate ID from employee accessing the system
 	 * @return valid entry to system if correct
 	 */

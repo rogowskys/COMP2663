@@ -1,6 +1,9 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+/**
+ * Manages the transactions.
+ */
 public class transactionManagement {
 
     private static transaction newTransaction;
@@ -8,6 +11,11 @@ public class transactionManagement {
     private static String menuOption = "";
     private static account transactionCustomer;
 
+    /**
+     * Allows a new transaction to be made via a menu.
+     *
+     * @param transactionRegister transaction in progress
+     */
     public static void transactionManagementMenu(ArrayList<transaction> transactionRegister) {
 
         do {
@@ -34,6 +42,9 @@ public class transactionManagement {
         } while (!menuOption.equals("B"));
     }
 
+    /**
+     * Allows a new transaction to be created.
+     */
     static void createNewTransaction() {
         // Find the customer first to associate to the transaction
         transactionCustomer = accountManagement.findCustomerAccount(posTerminal.customerAccounts, scan);
@@ -42,6 +53,10 @@ public class transactionManagement {
         addCustomerBalance();
     }
 
+    /**
+     * Allows for options in transaction to be completed.
+     * Options include: Add, Remove, Void, and Complete.
+     */
     static void inTransaction() {
         boolean transactionComplete = false;
         int menuOption;
@@ -129,7 +144,7 @@ public class transactionManagement {
     /**
      * Processes the payment by the customer.
      * 
-     * @param d
+     * @param d amount due by customer to be processed
      */
     static void processPayment(double d) {
         // TODO - implement Transaction.processPayment

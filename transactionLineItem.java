@@ -1,3 +1,6 @@
+/**
+ * Allows the item to be added to the transaction.
+ */
 public class transactionLineItem {
 
     protected Item transactionLineItem;
@@ -19,6 +22,12 @@ public class transactionLineItem {
         this.quantity = quantity;
     }
 
+    /**
+     * Processes item through transaction.
+     *
+     * @param transactionLineItem item to be processed
+     * @param quantity quantity of item
+     */
     public transactionLineItem(Item transactionLineItem, int quantity) {
         this.transactionLineItem = transactionLineItem;
         this.quantity = quantity;

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Allows customer accounts system to operate
+ * Allows customer accounts system to operate.
  */
 public class accountManagement {
 
@@ -48,10 +48,10 @@ public class accountManagement {
 	}
 
 	/**
-	 * Updates customer's account
+	 * Updates customer's account.
 	 * 
-	 * @param customerAccounts
-	 * @param scan
+	 * @param customerAccounts account for this customer
+	 * @param scan scanner to import data
 	 */
 	static void updateCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
 		account accountToUpdate = findCustomerAccount(customerAccounts, scan);
@@ -99,8 +99,8 @@ public class accountManagement {
 	/**
 	 * Searches accounts database for customer.
 	 * 
-	 * @param scan
-	 * @param customerAccounts
+	 * @param scan scanner to import data
+	 * @param customerAccounts account for this customer
 	 */
 	static account findCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
 		account searchCustomer;
@@ -139,8 +139,8 @@ public class accountManagement {
 	/**
 	 * Creates a new account for a customer.
 	 * 
-	 * @param customerAccounts
-	 * @param scan
+	 * @param customerAccounts account for this customer
+	 * @param scan scanner to import data
 	 */
 	static void createCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
 
