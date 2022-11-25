@@ -23,7 +23,7 @@ public class transactionManagement {
             System.out.println("Transaction Menu");
             System.out.println("_______________________\n");
             System.out.println("(C)reate new transaction\n");
-            System.out.println("(B)ack");
+            System.out.println("(B)ack\n");
             System.out.println("Selection:");
             menuOption = scan.nextLine();
             switch (menuOption.trim()) {

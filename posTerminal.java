@@ -35,8 +35,8 @@ public class posTerminal {
 			System.out.println("--- Main Menu ---");
 			System.out.println("(N)ew sale/rental transaction");
 			System.out.println("(C)ustomer Account Management");
-			System.out.println("(M)anage inventory");
-			System.out.println("(R)eservation");
+			System.out.println("(M)anage inventory\t <Not Implemented>");
+			System.out.println("(R)eservation\t <Not Implemented>");
 			System.out.println("(P)rint reports\n");
 			System.out.println("(Q)uit");
 			menuOption = scan.next();
@@ -152,6 +152,30 @@ public class posTerminal {
 		// Make some customer accounts
 		customerAccounts
 				.add(new account("Homer Simpson", "742 Evergreen Terrace", "867-5309", customerAccounts.size()));
+				/**
+				,---.
+				,.'-.   \
+			   ( ( ,'"""""-.
+			   `,X          `.
+			   /` `           `._
+			  (            ,   ,_\
+			  |          ,---.,'o `.
+			  |         / o   \     )
+			   \ ,.    (      .____,
+				\| \    \____,'     \
+			  '`'\  \        _,____,'
+			  \  ,--      ,-'     \
+				( C     ,'         \
+				 `--'  .'           |
+				   |   |         .O |
+				 __|    \        ,-'_
+				/ `L     `._  _,'  ' `.
+			   /    `--.._  `',.   _\  `
+			   `-.       /\  | `. ( ,\  \
+			  _/  `-._  /  \ |--'  (     \
+			 '  `-.   `'    \/\`.   `.    )
+				   \  -hrr-    \ `.  |    |
+				   */
 		customerAccounts.add(new account("Bill Gates", "1 Microsoft Way", "555-1234", customerAccounts.size()));
 		customerAccounts.add(new account("Big Customer", "Small House", "No phone", customerAccounts.size()));
 		customerAccounts.add(new account("Elon Musk", "1 Mars Way", "999-9999", customerAccounts.size()));
