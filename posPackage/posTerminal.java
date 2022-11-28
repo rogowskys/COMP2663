@@ -16,11 +16,10 @@
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
-
+package posPackage;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 
 public class posTerminal {
 	public static ArrayList<mediaItem> mediaInventory = new ArrayList<>();

@@ -1,14 +1,22 @@
 /**
- * Store class identifies the location.
+ * List of types of media.
  *
  * Bugs: None
  * 
  * @author Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and Sean Rogowsky (134715r) 134715r@ACADIAU.CA> 
  */
 
-public class Store {
+package posPackage;
+public enum mediaType {
 
-	int location;
-	int storeNumber;
+	vinyl,
+	VHS,
+	ps5,
+	ps4,
+	NES,
+	DVD,
+	CD,
+	bluRay,
+	atari2600;
 
 }

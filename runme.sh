@@ -1,24 +1,24 @@
 #!/bin/bash
-ECHO "Hacking the Planet..."
+echo "Hacking the Planet..."
 
-ECHO "///////////////////////////////////////////////////////////////////////////////"
-ECHO "//"                  
-ECHO "// Title:            Blockblunder Video POS Terminal"
-ECHO "// Purpose:          COMP2663 Assignment 4"
-ECHO "// "
-ECHO "// Authors:          Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and"
-ECHO "//                   Sean Rogowsky (134715r) <134715r@ACADIAU.CA> "
-ECHO "// Main Class File:  posTerminal.java"
-ECHO "//"
-ECHO "///////////////////////////////////////////////////////////////////////////////"
+echo "///////////////////////////////////////////////////////////////////////////////"
+echo "//"                  
+echo "// Title:            Blockblunder Video POS Terminal"
+echo "// Purpose:          COMP2663 Assignment 4"
+echo "// "
+echo "// Authors:          Kylie DeViller (162298d) <162298d@ACADIAU.CA>; and"
+echo "//                   Sean Rogowsky (134715r) <134715r@ACADIAU.CA> "
+echo "// Main Class File:  posTerminal.java"
+echo "//"
+echo "///////////////////////////////////////////////////////////////////////////////"
 
-ECHO "See staff.java for login credentials."
+echo "See staff.java for login credentials."
 
 
-javac *.java
+javac -d ./build/ *.java
 
-java posTerminal
+java ./build/posTerminal
 
-rm *.class
+#rm ./build/*.class
 
-ECHO "Thank you, come again."
+echo "Thank you, come again."
