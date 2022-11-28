@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import posPackage.*;
 
 public class test_account {
 

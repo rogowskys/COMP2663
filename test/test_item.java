@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import posPackage.*;
 public class test_item {
 
     // Test class for the mediaItem and nonMediaItem types.
