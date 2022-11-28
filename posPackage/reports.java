@@ -10,8 +10,6 @@ package posPackage;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import posTerminal;
-
 public class reports {
 
 	/**

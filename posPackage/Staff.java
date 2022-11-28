@@ -7,6 +7,7 @@
  */
 package posPackage;
 
+
 public class Staff {
 
 	private static final String[] employeeID = {
