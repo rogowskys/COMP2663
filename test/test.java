@@ -1,5 +1,3 @@
-import posPackage.Payment;
-import posPackage.*;
 
 import org.junit.Test;
 
@@ -7,18 +5,22 @@ import static org.junit.Assert.assertTrue;
 
 public class test {
 
-    public int testNumber, testPassed, testFailed;
     public static void main(String[] args) {
-
-        
-
 
     }
 
-    void print(String toPrint) {
-        System.out.println();
-        return;
+    @Test
+    public void shouldFailTestTest() {
+        String actual = "";
+        String expected = "fail";
+        assertTrue(actual.equals(expected));
+    }
 
+    @Test
+    public void shouldPassTestTest() {
+        String actual = "pass";
+        String expected = "pass";
+        assertTrue(actual.equals(expected));
     }
 
 }
