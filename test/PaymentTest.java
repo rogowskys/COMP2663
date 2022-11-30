@@ -16,21 +16,41 @@ public class PaymentTest {
 
     @Test
     public void testGetAmount() {
-
+        boolean result = false;
+        double expected = 123.45;
+        if (testPayment.getAmount() == expected) {
+            result = true;
+        }
+        assertTrue(result);
     }
 
     @Test
     public void testGetPaymentMethod() {
-
+        boolean result = false;
+        paymentType expected = paymentType.creditCard;
+        if (expected == testPayment.getPaymentMethod()) {
+            result = true;
+        }
+        assertTrue(result);
     }
 
     @Test
     public void testSetAmount() {
-
+        boolean result = false;
+        testPayment.setAmount(9.99);
+        if (testPayment.getAmount() == 9.99){
+            result = true;
+        }
+        assertTrue(result);
     }
 
     @Test
     public void testSetPaymentMethod() {
-
+        boolean result = false;
+        testPayment.setPaymentMethod(paymentType.cash);
+        if (testPayment.getPaymentMethod() == paymentType.cash){
+            result = true;
+        }
+        assertTrue(result);
     }
 }

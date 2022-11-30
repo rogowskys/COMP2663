@@ -12,6 +12,17 @@ public class transactionLineItem {
     protected Item transactionLineItem;
     private int quantity;
 
+    /**
+     * Processes item to be added to the current transaction.
+     *
+     * @param transactionLineItem item to be added to transaction
+     * @param quantity quantity of item
+     */
+    public transactionLineItem(Item transactionLineItem, int quantity) {
+        this.transactionLineItem = transactionLineItem;
+        this.quantity = quantity;
+    }
+
     public Item getTransactionLineItem() {
         return transactionLineItem;
     }
@@ -25,17 +36,6 @@ public class transactionLineItem {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    /**
-     * Processes item to be added to the current transaction.
-     *
-     * @param transactionLineItem item to be added to transaction
-     * @param quantity quantity of item
-     */
-    public transactionLineItem(Item transactionLineItem, int quantity) {
-        this.transactionLineItem = transactionLineItem;
         this.quantity = quantity;
     }
 

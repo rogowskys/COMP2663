@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class test {
+public class testTest {
 
     public static void main(String[] args) {
 

@@ -57,7 +57,7 @@ public class transactionManagement {
      */
     static void createNewTransaction() {
         // Find the customer first to associate to the transaction
-        transactionCustomer = accountManagement.findCustomerAccount(posTerminal.customerAccounts, scan);
+        transactionCustomer = accountManagement.findCustomerAccount(posTerminal.customerAccounts);
         // Instantiate a new transaction
         newTransaction = new transaction(transactionCustomer);
         addCustomerBalance();
