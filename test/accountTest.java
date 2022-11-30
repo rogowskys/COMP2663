@@ -101,7 +101,8 @@ public class accountTest {
 
     @Test
     public void testToString() {
-        String expected = "201\t\tKrusty The Clown\t555-3226\t$4.99";
+        String expected = "200		Homer Simpson	867-5309	$0.0";
+        System.out.println(testAccount.toString());
         assertTrue(testAccount.toString().equals(expected));
     }
 }

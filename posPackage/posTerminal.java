@@ -50,7 +50,7 @@ public class posTerminal {
 		do {
 			System.out.println("\n\n");
 			System.out.println("--- Main Menu ---");
-			System.out.println("(S) Sale/Rental Transaction");
+			System.out.println("(S)ale/Rental Transaction");
 			System.out.println("(C)ustomer Account Management");
 			System.out.println("(M)anage inventory\t <Not Implemented>");
 			System.out.println("(R)eservation\t <Not Implemented>");
