@@ -7,6 +7,7 @@
  */
 
 package posPackage;
+
 public enum MediaType {
 
 	vinyl,

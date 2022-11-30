@@ -7,7 +7,7 @@
  */
 package posPackage;
 
-public class transactionLineItem {
+public class TransactionLineItem {
 
     protected Item transactionLineItem;
     private int quantity;
@@ -18,7 +18,7 @@ public class transactionLineItem {
      * @param transactionLineItem item to be added to transaction
      * @param quantity quantity of item
      */
-    public transactionLineItem(Item transactionLineItem, int quantity) {
+    public TransactionLineItem(Item transactionLineItem, int quantity) {
         this.transactionLineItem = transactionLineItem;
         this.quantity = quantity;
     }

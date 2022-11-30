@@ -16,7 +16,7 @@ public class Transaction {
 
 	final double TAXRATE = 0.15;
 
-	private ArrayList<transactionLineItem> transactionLineItems = new ArrayList<>();
+	private ArrayList<TransactionLineItem> transactionLineItems = new ArrayList<>();
 	private Account customerAccount;
 	private double subTotal;
 	private double taxes;
@@ -42,10 +42,10 @@ public class Transaction {
 	 * Add new item to transaction.
 	 *
 	 * @param newLineItem item to add to transaction
-	 * @param quantity quantity of item
+	 * @param quantity    quantity of item
 	 */
 	public void addNewLineItem(Item newLineItem, int quantity) {
-		transactionLineItems.add(new transactionLineItem(newLineItem, quantity));
+		transactionLineItems.add(new TransactionLineItem(newLineItem, quantity));
 		updateTotals();
 	}
 
@@ -75,13 +75,17 @@ public class Transaction {
 	}
 
 	public Item getLineItem(int index) {
-		transactionLineItem lineToReturn = transactionLineItems.get(index);
+		TransactionLineItem lineToReturn = transactionLineItems.get(index);
 		Item itemToReturn = lineToReturn.getTransactionLineItem();
 		return itemToReturn;
 	}
 
-	public transactionLineItem getTransactionLineItems(int index) {
+	public TransactionLineItem getTransactionLineItems(int index) {
 		return transactionLineItems.get(index);
+	}
+
+	public int getNumberOfLineItems() {
+		return transactionLineItems.size();
 	}
 
 	public double getSubTotal() {
