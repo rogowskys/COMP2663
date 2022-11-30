@@ -18,7 +18,7 @@ public class accountManagement {
 	 * 
 	 * @param customerAccounts account of this customer
 	 */
-	public static void accountManagementMenu(ArrayList<account> customerAccounts) {
+	public static void accountManagementMenu(ArrayList<Account> customerAccounts) {
 		
 		String menuOption = null;
 		do {
@@ -59,8 +59,8 @@ public class accountManagement {
 	 * 
 	 * @param customerAccounts account for this customer
 	 */
-	public static void updateCustomerAccount(ArrayList<account> customerAccounts) {
-		account accountToUpdate = findCustomerAccount(customerAccounts);
+	public static void updateCustomerAccount(ArrayList<Account> customerAccounts) {
+		Account accountToUpdate = findCustomerAccount(customerAccounts);
 		String fieldToUpdate = "";
 		String menuSelection = "";
 
@@ -107,8 +107,8 @@ public class accountManagement {
 	 * 
 	 * @param customerAccounts account for this customer
 	 */
-	public static account findCustomerAccount(ArrayList<account> customerAccounts) {
-		account searchCustomer;
+	public static Account findCustomerAccount(ArrayList<Account> customerAccounts) {
+		Account searchCustomer;
 		String searchSelection = "";
 		String searchTerm = "";
 
@@ -146,9 +146,9 @@ public class accountManagement {
 	 * 
 	 * @param customerAccounts account for this customer
 	 */
-	public static void createCustomerAccount(ArrayList<account> customerAccounts) {
+	public static void createCustomerAccount(ArrayList<Account> customerAccounts) {
 
-		account newCustomer = new account();
+		Account newCustomer = new Account();
 
 		System.out.println("\nCreate a new customer account:\n");
 		System.out.println("Customer Name: \"Firstname Lastname\"");

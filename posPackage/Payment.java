@@ -10,7 +10,7 @@ package posPackage;
 public class Payment {
 
 	double amount;
-	paymentType paymentMethod;
+	PaymentType paymentMethod;
 
 	private void openDrawer() {
 		System.out.println("--- Beep Boop.. Cash Drawer Opened ---\n");
@@ -24,11 +24,11 @@ public class Payment {
 		this.amount = amount;
 	}
 
-	public paymentType getPaymentMethod() {
+	public PaymentType getPaymentMethod() {
 		return paymentMethod;
 	}
 
-	public void setPaymentMethod(paymentType paymentMethod) {
+	public void setPaymentMethod(PaymentType paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
 
@@ -38,10 +38,10 @@ public class Payment {
 	 * @param amount amount due by customer for this transaction
 	 * @param paymentMethod method of payment for this transaction
 	 */
-	public Payment(double amount, paymentType paymentMethod) {
+	public Payment(double amount, PaymentType paymentMethod) {
 		this.amount = amount;
 		this.paymentMethod = paymentMethod;
-		if (paymentMethod == paymentType.cash){
+		if (paymentMethod == PaymentType.cash){
 			openDrawer();
 		}
 	}

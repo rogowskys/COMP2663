@@ -12,12 +12,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class transaction {
+public class Transaction {
 
 	final double TAXRATE = 0.15;
 
 	private ArrayList<transactionLineItem> transactionLineItems = new ArrayList<>();
-	private account customerAccount;
+	private Account customerAccount;
 	private double subTotal;
 	private double taxes;
 	private double total;
@@ -32,7 +32,7 @@ public class transaction {
 	 *
 	 * @param customerAccount account for this customer
 	 */
-	public transaction(account customerAccount) {
+	public Transaction(Account customerAccount) {
 		this.customerAccount = customerAccount;
 		date = LocalDate.now();
 		time = LocalTime.now();
@@ -126,8 +126,8 @@ public class transaction {
 					getLineItem(i).description + "\t\t" + getTransactionLineItems(i).getQuantity() +
 					"\t\t$" + getLineItem(i).getPrice() * getTransactionLineItems(i).getQuantity() +
 					"\t";
-			if (getLineItem(i) instanceof mediaItem) {
-				transactionPrintout += ((mediaItem) getLineItem(i)).getRentalLength() + " Days";
+			if (getLineItem(i) instanceof MediaItem) {
+				transactionPrintout += ((MediaItem) getLineItem(i)).getRentalLength() + " Days";
 			}
 			transactionPrintout += "\n";
 		}

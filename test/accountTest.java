@@ -6,19 +6,19 @@ import static org.junit.Assert.assertTrue;
 import posPackage.*;
 
 public class accountTest {
-    private account testAccount;
+    private Account testAccount;
 
     @Before
     public void setUp() {
-        testAccount = new account("Homer Simpson", "742 Evergreen Terrace", "867-5309", 100);
+        testAccount = new Account("Homer Simpson", "742 Evergreen Terrace", "867-5309", 100);
     }
 
     @Test
     public void testGetAccountBalance() {
         double testBalance = testAccount.getAccountBalance();
-        double actualBalance = 0.00;
+        double expectedBalance = 0.00;
         boolean result = false;
-        if (actualBalance == testBalance) {
+        if (expectedBalance == testBalance) {
             result = true;
         }
         assertTrue(result);

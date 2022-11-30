@@ -11,7 +11,7 @@ public class PaymentTest {
 
     @Before
     public void setup() {
-        testPayment = new Payment(123.45, paymentType.creditCard);
+        testPayment = new Payment(123.45, PaymentType.creditCard);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class PaymentTest {
     @Test
     public void testGetPaymentMethod() {
         boolean result = false;
-        paymentType expected = paymentType.creditCard;
+        PaymentType expected = PaymentType.creditCard;
         if (expected == testPayment.getPaymentMethod()) {
             result = true;
         }
@@ -47,8 +47,8 @@ public class PaymentTest {
     @Test
     public void testSetPaymentMethod() {
         boolean result = false;
-        testPayment.setPaymentMethod(paymentType.cash);
-        if (testPayment.getPaymentMethod() == paymentType.cash){
+        testPayment.setPaymentMethod(PaymentType.cash);
+        if (testPayment.getPaymentMethod() == PaymentType.cash){
             result = true;
         }
         assertTrue(result);

@@ -7,13 +7,41 @@ import posPackage.*;
 
 public class transactionTest {
 
+    public Item testItem, testItem2;
+    public Transaction testTransaction;
+    public Account testAccount;
+
     @Before
     public void setup() {
-
+        testItem = new MediaItem(100, 0.93, 2, "David and Lisa", "habitasse", "Web Jeske", "Gay Montford",
+                "Alidia Maffione", 7, MediaType.DVD);
+        testItem2 = new Item("Doritos 454g", 12, 5.99, 50);
+        testAccount = new Account("Homer Simpson", "742 Evergreen Terrace", "867-5309", 1);
+        testTransaction = new Transaction(testAccount);
     }
 
     @Test
     public void testAddNewLineItem() {
+        boolean result = false;
+        try {
+            testTransaction.addNewLineItem(testItem, 2);
+        } catch (Exception exception) {
+            result = false;
+        }
+        if (testItem == testTransaction.getLineItem(0)) {
+            result = true;
+        }
+        assertTrue(result);
+    }
+
+    @Test
+    public void testRemoveLineItem() {
+
+    }
+
+
+    @Test
+    public void testSetCustomerPayment() {
 
     }
 
@@ -57,15 +85,8 @@ public class transactionTest {
 
     }
 
-    @Test
-    public void testRemoveLineItem() {
+   
 
-    }
-
-    @Test
-    public void testSetCustomerPayment() {
-
-    }
 
     @Test
     public void testToString() {

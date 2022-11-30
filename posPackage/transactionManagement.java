@@ -12,17 +12,17 @@ import java.util.ArrayList;
 
 public class transactionManagement {
 
-    private static transaction newTransaction;
+    private static Transaction newTransaction;
     private static Scanner scan = new Scanner(System.in);
     private static String menuOption = "";
-    private static account transactionCustomer;
+    private static Account transactionCustomer;
 
     /**
      * Allows a new transaction to be made via a menu.
      *
      * @param transactionRegister transaction in progress
      */
-    public static void transactionManagementMenu(ArrayList<transaction> transactionRegister) {
+    public static void transactionManagementMenu(ArrayList<Transaction> transactionRegister) {
 
         do {
             System.out.println("\n");
@@ -59,7 +59,7 @@ public class transactionManagement {
         // Find the customer first to associate to the transaction
         transactionCustomer = accountManagement.findCustomerAccount(posTerminal.customerAccounts);
         // Instantiate a new transaction
-        newTransaction = new transaction(transactionCustomer);
+        newTransaction = new Transaction(transactionCustomer);
         addCustomerBalance();
     }
 
@@ -165,15 +165,15 @@ public class transactionManagement {
         do {
             switch (menuOption) {
                 case 1:
-                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.cash));
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), PaymentType.cash));
                     paymentMade = true;
                     break;
                 case 2:
-                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.debitCard));
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), PaymentType.debitCard));
                     paymentMade = true;
                     break;
                 case 3:
-                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), paymentType.creditCard));
+                    newTransaction.setCustomerPayment(new Payment(newTransaction.getTotal(), PaymentType.creditCard));
                     paymentMade = true;
                     break;
                 default:
