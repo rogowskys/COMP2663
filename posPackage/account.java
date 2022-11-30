@@ -7,7 +7,7 @@
  */
 
 package posPackage;
-public class account {
+public class Account {
 
 	private int accountID = 100;
 	private String customerName;
@@ -23,14 +23,14 @@ public class account {
 	 * @param customerPhoneNumber phone number of this customer
 	 * @param nextAccountID account ID number for the next created account
 	 */
-	public account(String customerName, String customerAddress, String customerPhoneNumber, int nextAccountID) {
+	public Account(String customerName, String customerAddress, String customerPhoneNumber, int nextAccountID) {
 		this.customerName = customerName;
 		this.customerAddress = customerAddress;
 		this.customerPhoneNumber = customerPhoneNumber;
 		accountID += nextAccountID;
 	}
 
-	public account() {
+	public Account() {
 	}
 
 	public int getAccountID() {

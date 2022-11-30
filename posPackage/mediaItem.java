@@ -7,7 +7,7 @@
  */
 
 package posPackage;
-public class mediaItem extends Item {
+public class MediaItem extends Item {
 
 	private String title;
 	private String location;
@@ -15,9 +15,9 @@ public class mediaItem extends Item {
 	private String director;
 	private String producer;
 	private int rentalLength;
-	private mediaType typeOfMedia;
+	private MediaType typeOfMedia;
 
-	public mediaItem() {
+	public MediaItem() {
 		// Null Constructor
 	}
 
@@ -35,9 +35,9 @@ public class mediaItem extends Item {
 	 * @param rentalLength time period that this media item can be rented
 	 * @param typeOfMedia media type of this item
 	 */
-	 public mediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
+	 public MediaItem(int UPC, double price, int inventoryCount, String title, String location, String actors,
 			String director,
-			String producer, int rentalLength, mediaType typeOfMedia) {
+			String producer, int rentalLength, MediaType typeOfMedia) {
 		super.UPC = UPC;
 		super.price = price;
 		super.inventoryCount = inventoryCount;
@@ -52,11 +52,11 @@ public class mediaItem extends Item {
 
 	}
 
-	public mediaType getTypeOfMedia() {
+	public MediaType getTypeOfMedia() {
 		return typeOfMedia;
 	}
 
-	public void setTypeOfMedia(mediaType typeOfMedia) {
+	public void setTypeOfMedia(MediaType typeOfMedia) {
 		this.typeOfMedia = typeOfMedia;
 	}
 

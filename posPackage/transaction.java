@@ -12,12 +12,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class transaction {
+public class Transaction {
 
 	final double TAXRATE = 0.15;
 
-	private ArrayList<transactionLineItem> transactionLineItems = new ArrayList<>();
-	private account customerAccount;
+	private ArrayList<TransactionLineItem> transactionLineItems = new ArrayList<>();
+	private Account customerAccount;
 	private double subTotal;
 	private double taxes;
 	private double total;
@@ -32,7 +32,7 @@ public class transaction {
 	 *
 	 * @param customerAccount account for this customer
 	 */
-	public transaction(account customerAccount) {
+	public Transaction(Account customerAccount) {
 		this.customerAccount = customerAccount;
 		date = LocalDate.now();
 		time = LocalTime.now();
@@ -42,10 +42,10 @@ public class transaction {
 	 * Add new item to transaction.
 	 *
 	 * @param newLineItem item to add to transaction
-	 * @param quantity quantity of item
+	 * @param quantity    quantity of item
 	 */
 	public void addNewLineItem(Item newLineItem, int quantity) {
-		transactionLineItems.add(new transactionLineItem(newLineItem, quantity));
+		transactionLineItems.add(new TransactionLineItem(newLineItem, quantity));
 		updateTotals();
 	}
 
@@ -75,13 +75,17 @@ public class transaction {
 	}
 
 	public Item getLineItem(int index) {
-		transactionLineItem lineToReturn = transactionLineItems.get(index);
+		TransactionLineItem lineToReturn = transactionLineItems.get(index);
 		Item itemToReturn = lineToReturn.getTransactionLineItem();
 		return itemToReturn;
 	}
 
-	public transactionLineItem getTransactionLineItems(int index) {
+	public TransactionLineItem getTransactionLineItems(int index) {
 		return transactionLineItems.get(index);
+	}
+
+	public int getNumberOfLineItems() {
+		return transactionLineItems.size();
 	}
 
 	public double getSubTotal() {
@@ -126,8 +130,8 @@ public class transaction {
 					getLineItem(i).description + "\t\t" + getTransactionLineItems(i).getQuantity() +
 					"\t\t$" + getLineItem(i).getPrice() * getTransactionLineItems(i).getQuantity() +
 					"\t";
-			if (getLineItem(i) instanceof mediaItem) {
-				transactionPrintout += ((mediaItem) getLineItem(i)).getRentalLength() + " Days";
+			if (getLineItem(i) instanceof MediaItem) {
+				transactionPrintout += ((MediaItem) getLineItem(i)).getRentalLength() + " Days";
 			}
 			transactionPrintout += "\n";
 		}

@@ -7,7 +7,7 @@
  */
 package posPackage;
 
-public enum paymentType {
+public enum PaymentType {
 
 	cash,
 	debitCard,

@@ -16,7 +16,7 @@ public class returnMedia {
 	 * @param customer the account from the customer
 	 * @param item media that is being returned
 	 */
-	public returnMedia(account customer, mediaItem item) {
+	public returnMedia(Account customer, MediaItem item) {
 		// TODO - implement returnMedia.returnMedia
 		throw new UnsupportedOperationException();
 	}

@@ -7,7 +7,8 @@
  */
 
 package posPackage;
-public enum mediaType {
+
+public enum MediaType {
 
 	vinyl,
 	VHS,

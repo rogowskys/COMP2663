@@ -12,13 +12,14 @@ import java.util.Scanner;
 
 public class accountManagement {
 
+	public static Scanner scan = new Scanner(System.in);
 	/**
 	 * Creates a menu for the customer accounts system.
 	 * 
 	 * @param customerAccounts account of this customer
 	 */
-	public static void accountManagementMenu(ArrayList<account> customerAccounts) {
-		Scanner scan = new Scanner(System.in);
+	public static void accountManagementMenu(ArrayList<Account> customerAccounts) {
+		
 		String menuOption = null;
 		do {
 			System.out.println("\n");
@@ -35,16 +36,16 @@ public class accountManagement {
 			menuOption = scan.nextLine();
 			switch (menuOption.trim()) {
 				case "C":
-					createCustomerAccount(customerAccounts, scan);
+					createCustomerAccount(customerAccounts);
 					break;
 				case "U":
-					updateCustomerAccount(customerAccounts, scan);
+					updateCustomerAccount(customerAccounts);
 					break;
 				case "D":
 					reports.listAccounts(customerAccounts);
 					break;
 				case "S":
-					findCustomerAccount(customerAccounts, scan);
+					findCustomerAccount(customerAccounts);
 					break;
 				default:
 					System.out.println("Invalid Selection\n");
@@ -57,10 +58,9 @@ public class accountManagement {
 	 * Updates customer's account.
 	 * 
 	 * @param customerAccounts account for this customer
-	 * @param scan scanner to import data
 	 */
-	static void updateCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
-		account accountToUpdate = findCustomerAccount(customerAccounts, scan);
+	public static void updateCustomerAccount(ArrayList<Account> customerAccounts) {
+		Account accountToUpdate = findCustomerAccount(customerAccounts);
 		String fieldToUpdate = "";
 		String menuSelection = "";
 
@@ -105,11 +105,10 @@ public class accountManagement {
 	/**
 	 * Searches accounts database for customer.
 	 * 
-	 * @param scan scanner to import data
 	 * @param customerAccounts account for this customer
 	 */
-	static account findCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
-		account searchCustomer;
+	public static Account findCustomerAccount(ArrayList<Account> customerAccounts) {
+		Account searchCustomer;
 		String searchSelection = "";
 		String searchTerm = "";
 
@@ -146,11 +145,10 @@ public class accountManagement {
 	 * Creates a new account for a customer.
 	 * 
 	 * @param customerAccounts account for this customer
-	 * @param scan scanner to import data
 	 */
-	static void createCustomerAccount(ArrayList<account> customerAccounts, Scanner scan) {
+	public static void createCustomerAccount(ArrayList<Account> customerAccounts) {
 
-		account newCustomer = new account();
+		Account newCustomer = new Account();
 
 		System.out.println("\nCreate a new customer account:\n");
 		System.out.println("Customer Name: \"Firstname Lastname\"");
